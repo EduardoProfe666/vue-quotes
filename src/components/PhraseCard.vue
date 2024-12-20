@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { usePhraseStore } from '../stores/phrases'
-import { toPng } from 'html-to-image'
-import { downloadImage } from '../utils/image'
+import {ref, onMounted} from 'vue'
+import {usePhraseStore} from '../stores/phrases'
+import {toPng} from 'html-to-image'
+import {downloadImage} from '../utils/image'
 import NavigationButtons from './NavigationButtons.vue'
 import PhraseContent from './phrase/PhraseContent.vue'
 import PhraseImage from './phrase/PhraseImage.vue'
 import Button from './ui/Button.vue'
-import { Sun, Moon, Github } from './icons'
-import { toast } from 'vue-sonner'
+import {
+  PhSun,
+  PhMoon,
+  PhGithub
+} from '@phosphor-icons/vue'
+import {toast} from 'vue-sonner'
 
 const store = usePhraseStore()
 const cardRef = ref<HTMLElement | null>(null)
@@ -90,7 +94,7 @@ onMounted(() => {
             class="fixed bottom-20 right-4 shadow-lg"
             title="Mi Portfolio"
         >
-          <Github
+          <PhGithub
               :size="24"
               weight="bold"
           />
@@ -104,7 +108,7 @@ onMounted(() => {
           :title="store.isDark ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'"
       >
         <component
-            :is="store.isDark ? Sun : Moon"
+            :is="store.isDark ? PhSun : PhMoon"
             :size="24"
             weight="bold"
         />
@@ -112,5 +116,5 @@ onMounted(() => {
     </div>
   </div>
 
-  <Toaster position="top-center" />
+  <Toaster position="top-center"/>
 </template>

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { usePhraseStore } from '../stores/phrases'
-import { ArrowLeft, ArrowRight, Camera } from './icons'
+import {
+  PhArrowLeft,
+  PhArrowRight,
+  PhDownload,
+} from '@phosphor-icons/vue'
 import Button from './ui/Button.vue'
 
 const store = usePhraseStore()
@@ -17,7 +21,7 @@ defineProps<{
         class="flex flex-col items-center"
         :disabled="store.isLoading"
     >
-      <ArrowLeft
+      <PhArrowLeft
           :size="24"
           weight="bold"
           class="transition-transform duration-300 group-hover:-translate-x-1"
@@ -30,7 +34,7 @@ defineProps<{
         :disabled="isExporting || store.isLoading"
         class="flex flex-col items-center"
     >
-      <Camera
+      <PhDownload
           :size="24"
           weight="bold"
           class="transition-transform duration-300 group-hover:scale-110"
@@ -43,7 +47,7 @@ defineProps<{
         class="flex flex-col items-center"
         :disabled="store.isLoading"
     >
-      <ArrowRight
+      <PhArrowRight
           :size="24"
           weight="bold"
           class="transition-transform duration-300 group-hover:translate-x-1"
