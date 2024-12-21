@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Phrase } from '../../types/phrase'
+import type { Phrase1 } from '../../types/phrase-schema.ts'
 
 defineProps<{
-  phrase: Phrase | undefined
+  phrase: Phrase1 | undefined
   isDark: boolean
 }>()
 </script>

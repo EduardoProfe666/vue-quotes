@@ -5,7 +5,7 @@ import {
   PhArrowRight,
   PhDownload,
 } from '@phosphor-icons/vue'
-import Button from './ui/Button.vue'
+import ButtonsSchema from './ui/Button.vue'
 
 const store = usePhraseStore()
 

@@ -6,11 +6,11 @@ import {downloadImage} from '../utils/image'
 import NavigationButtons from './NavigationButtons.vue'
 import PhraseContent from './phrase/PhraseContent.vue'
 import PhraseImage from './phrase/PhraseImage.vue'
-import Button from './ui/Button.vue'
+import ButtonsSchema from './ui/Button.vue'
 import {
   PhSun,
   PhMoon,
-  PhGithub
+  PhGithubLogo
 } from '@phosphor-icons/vue'
 import {toast} from 'vue-sonner'
 
@@ -94,7 +94,7 @@ onMounted(() => {
             class="fixed bottom-20 right-4 shadow-lg"
             title="Mi Portfolio"
         >
-          <PhGithub
+          <PhGithubLogo
               :size="24"
               weight="bold"
           />
