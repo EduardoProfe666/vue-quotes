@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { usePhraseStore } from './stores/phrases'
 import PhraseCard from './components/PhraseCard.vue'
+import {generals} from "./data/data.ts";
 
 const store = usePhraseStore()
 
@@ -18,7 +19,7 @@ onMounted(async () => {
       <h1
         class="text-5xl font-bold text-center mb-12 text-primary-900 dark:text-white animate-slide-down"
       >
-        Frases Célebres
+        {{ generals.title }}
       </h1>
       <PhraseCard />
     </div>

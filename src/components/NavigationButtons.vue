@@ -5,7 +5,8 @@ import {
   PhArrowRight,
   PhDownload,
 } from '@phosphor-icons/vue'
-import ButtonsSchema from './ui/Button.vue'
+import Button from './ui/Button.vue'
+import {buttons} from "../data/data.ts";
 
 const store = usePhraseStore()
 
@@ -21,12 +22,12 @@ defineProps<{
         class="flex flex-col items-center"
         :disabled="store.isLoading"
     >
-      <PhArrowLeft
-          :size="24"
-          weight="bold"
-          class="transition-transform duration-300 group-hover:-translate-x-1"
+      <component :is="buttons.previousIcon || PhArrowLeft"
+                 :size="24"
+                 weight="bold"
+                 class="transition-transform duration-300 group-hover:-translate-x-1"
       />
-      <span class="hidden md:inline">Anterior</span>
+      <span class="hidden md:inline">{{ buttons.previousText || 'Previous' }}</span>
     </Button>
 
     <Button
@@ -34,12 +35,12 @@ defineProps<{
         :disabled="isExporting || store.isLoading"
         class="flex flex-col items-center"
     >
-      <PhDownload
-          :size="24"
-          weight="bold"
-          class="transition-transform duration-300 group-hover:scale-110"
+      <component :is="buttons.exportIcon || PhDownload"
+                 :size="24"
+                 weight="bold"
+                 class="transition-transform duration-300 group-hover:scale-110"
       />
-      <span class="hidden md:inline">{{ isExporting ? 'Exportando...' : 'Exportar' }}</span>
+      <span class="hidden md:inline">{{ isExporting ? (buttons.exportActiveText || 'Exporting...') : (buttons.exportText || 'Export') }}</span>
     </Button>
 
     <Button
@@ -47,12 +48,12 @@ defineProps<{
         class="flex flex-col items-center"
         :disabled="store.isLoading"
     >
-      <PhArrowRight
-          :size="24"
-          weight="bold"
-          class="transition-transform duration-300 group-hover:translate-x-1"
+      <component :is="buttons.nextIcon || PhArrowRight"
+                 :size="24"
+                 weight="bold"
+                 class="transition-transform duration-300 group-hover:translate-x-1"
       />
-      <span class="hidden md:inline">Siguiente</span>
+      <span class="hidden md:inline">{{ buttons.nextText || 'Next' }}</span>
     </Button>
   </div>
 </template>

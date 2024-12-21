@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import type { Phrase1 } from '../../types/phrase-schema.ts'
+import type { PhraseSchema } from '../../types/phrase-schema.ts'
+import {generals} from "../../data/data.ts";
 
 defineProps<{
-  phrase: Phrase1 | undefined
+  phrase: PhraseSchema | undefined
   isDark: boolean
 }>()
 </script>
@@ -43,7 +44,7 @@ defineProps<{
           isDark ? 'text-primary-300' : 'text-primary-600'
         ]"
       >
-        ChocolateMC
+        {{ generals.author || phrase?.footer || 'Anonymous'  }}
       </p>
     </div>
   </div>

@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import {ref, onMounted} from 'vue'
+import {ref} from 'vue'
 import {usePhraseStore} from '../stores/phrases'
 import {toPng} from 'html-to-image'
 import {downloadImage} from '../utils/image'
 import NavigationButtons from './NavigationButtons.vue'
 import PhraseContent from './phrase/PhraseContent.vue'
 import PhraseImage from './phrase/PhraseImage.vue'
-import ButtonsSchema from './ui/Button.vue'
+import Button from './ui/Button.vue'
 import {
   PhSun,
   PhMoon,
   PhGithubLogo
 } from '@phosphor-icons/vue'
 import {toast} from 'vue-sonner'
+import {buttons} from "../data/data.ts";
 
 const store = usePhraseStore()
 const cardRef = ref<HTMLElement | null>(null)
-const imageUrl = ref('/choco.png')
 const isExporting = ref(false)
 
 const exportAsPng = async () => {
@@ -37,27 +37,15 @@ const exportAsPng = async () => {
       cacheBust: true
     })
 
-    downloadImage(dataUrl, 'inspiring-phrase.png')
-    toast.success('Frase exportada con éxito')
+    downloadImage(dataUrl, 'phrase.png')
+    toast.success(buttons.exportSuccessNotification || 'Export Phrase Successfully')
   } catch (error) {
     console.error('Error exporting image:', error)
-    toast.error('Falló la exportación. Intente más tarde')
+    toast.error(buttons.exportFailedNotification ||  'Export Failed. Try later')
   } finally {
     isExporting.value = false
   }
 }
-
-const updateImage = () => {
-  imageUrl.value = '/choco.png'
-}
-
-onMounted(() => {
-  store.$subscribe((_, state) => {
-    if (state.currentIndex !== undefined) {
-      updateImage()
-    }
-  })
-})
 </script>
 
 <template>
@@ -75,7 +63,7 @@ onMounted(() => {
             :is-dark="store.isDark"
         />
         <PhraseImage
-            :image-url="imageUrl"
+            :image-url="store.currentPhraseImage"
             :is-dark="store.isDark"
         />
       </div>
@@ -87,16 +75,15 @@ onMounted(() => {
           @export="exportAsPng"
       />
 
-      <!-- Nuevo botón flotante -->
-      <a href="https://eduardoprofe666.github.io" target="_blank" rel="noopener noreferrer">
-        <Button
+      <a :href="buttons.socialButtonLink || 'https://eduardoprofe666.github.io'" target="_blank" rel="noopener noreferrer">
+        <Button v-if="buttons.socialButtonEnabled"
             variant="icon"
             class="fixed bottom-20 right-4 shadow-lg"
-            title="Mi Portfolio"
+            :title="buttons.socialButtonText || 'My Portfolio'"
         >
-          <PhGithubLogo
-              :size="24"
-              weight="bold"
+          <component :is="buttons.socialButtonIcon || PhGithubLogo"
+                     :size="24"
+                     weight="bold"
           />
         </Button>
       </a>
@@ -105,10 +92,10 @@ onMounted(() => {
           variant="icon"
           @click="store.toggleDarkMode"
           class="fixed bottom-6 right-4 shadow-lg"
-          :title="store.isDark ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'"
+          :title="store.isDark ? (buttons.darkModeTooltipText || 'Change to Light Mode') : (buttons.lightModeTooltipText || 'Change to Dark Mode')"
       >
         <component
-            :is="store.isDark ? PhSun : PhMoon"
+            :is="store.isDark ? (buttons.darkModeIcon || PhSun) : (buttons.lightModeIcon || PhMoon)"
             :size="24"
             weight="bold"
         />

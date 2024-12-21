@@ -5,7 +5,8 @@ import {GeneralsSchema} from "../types/generals-schema.ts";
 import {ButtonsSchema} from "../types/buttons-schema.ts";
 
 export const generals: GeneralsSchema = {
-    title: '',
+    title: 'Quotes',
+    randomPhrases: true,
 };
 
 // -------------------------------------------------------------------- //
@@ -14,7 +15,10 @@ export const metadata: MetadataSchema = {};
 
 // -------------------------------------------------------------------- //
 
-export const phrases: PhraseSchema[] = [];
+export const phrases: PhraseSchema[] = [
+    {message: 'Hello World!', footer: 'Someone'},
+    {message: 'vue-quotes rocks 🤘', footer: 'An awesome person'},
+];
 
 // -------------------------------------------------------------------- //
 
