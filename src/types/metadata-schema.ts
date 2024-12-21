@@ -5,4 +5,5 @@ export default interface MetadataSchema {
     locale?: string;
     url?: string;
     image?: string;
+    author?: string;
 }

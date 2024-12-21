@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import { Toaster } from 'vue-sonner'
+import {createApp} from 'vue'
+import {createPinia} from 'pinia'
+import {Toaster} from 'vue-sonner'
 import './style.css'
 import App from './App.vue'
 import PhosphorIcons from "@phosphor-icons/vue"
