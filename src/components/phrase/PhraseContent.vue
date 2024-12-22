@@ -14,14 +14,14 @@ defineProps<{
       class="relative animate-slide-up"
     >
       <div 
-        class="absolute -left-6 top-0 h-full w-1 bg-primary-500 rounded-full transform transition-all duration-300 group-hover:scale-y-110"
+        class="absolute -left-6 top-0 h-full w-1 bg-light-cd_decoration hover:bg-light-cd_hover_decoration dark:bg-dark-cd_decoration dark:hover:bg-dark-cd_hover_decoration rounded-full transform transition-all duration-300 group-hover:scale-y-110"
       />
       <p 
         class="text-3xl md:text-4xl lg:text-5xl font-display leading-relaxed tracking-tight"
         :class="[
           isDark 
-            ? 'text-white/90' 
-            : 'text-gray-800'
+            ? 'text-dark-cd_t/90'
+            : 'text-light-cd_t',
         ]"
       >
         "{{ phrase?.message }}"
@@ -33,15 +33,15 @@ defineProps<{
       style="animation-delay: 200ms;"
     >
       <div 
-        class="h-px flex-1"
+        class="h-0.5 flex-1"
         :class="[
-          isDark ? 'bg-white/20' : 'bg-gray-300'
+          isDark ? 'bg-dark-cd_footer' : 'bg-light-cd_footer',
         ]"
       />
       <p 
         class="font-display text-xl italic"
         :class="[
-          isDark ? 'text-primary-300' : 'text-primary-600'
+          isDark ? 'text-dark-cd_author' : 'text-light-cd_author',
         ]"
       >
         {{ generals.author || phrase?.footer || 'Anonymous'  }}

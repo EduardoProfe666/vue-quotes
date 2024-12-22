@@ -69,11 +69,11 @@ onBeforeMount(() => {
 
 <template>
   <main 
-    class="min-h-screen transition-colors duration-500 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-900 dark:to-gray-800"
+    class="min-h-screen transition-colors duration-500 bg-gradient-to-br from-light-background_from to-light-background_to dark:from-dark-background_from dark:to-dark-background_to"
   >
     <div class="container mx-auto py-12">
       <h1
-        class="text-5xl font-bold text-center mb-12 text-primary-900 dark:text-primary-50 animate-slide-down"
+        class="text-5xl font-bold text-center mb-12 text-light-t dark:text-dark-t animate-slide-down"
       >
         {{ generals.title }}
       </h1>

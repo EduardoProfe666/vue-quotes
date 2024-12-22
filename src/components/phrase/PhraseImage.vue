@@ -15,7 +15,6 @@ defineProps<{
       :key="imageUrl"
       alt="Author"
       class="w-full h-64 md:h-96 object-cover transition-transform duration-300 group-hover:scale-105 rounded-effect"
-      crossorigin="anonymous"
     />
   </div>
 </template>
