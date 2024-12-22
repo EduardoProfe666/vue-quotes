@@ -28,7 +28,7 @@ defineProps<{
                  :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
                  class="transition-transform duration-300 group-hover:-translate-x-1"
       />
-      <span class="hidden md:inline">{{ buttons.previousText || 'Previous' }}</span>
+      <span class="hidden md:inline">{{ buttons.previousText || 'Prev' }}</span>
     </Button>
 
     <Button

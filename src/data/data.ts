@@ -4,64 +4,63 @@ import {GeneralsSchema} from "../types/generals-schema.ts";
 import {ButtonsSchema} from "../types/buttons-schema.ts";
 import {ThemeSchema} from "../types/theme-schema.ts";
 
+// ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
 export const generals: GeneralsSchema = {
     title: 'Quotes',
     randomPhrases: true,
 };
 
-// -------------------------------------------------------------------- //
-
+// ---------------------------- 🔮 METADATA 🔮 ---------------------------- //
 export const metadata: MetadataSchema = {};
 
-// -------------------------------------------------------------------- //
-
+// ---------------------------- 🗣️ PHRASES 🗣️ ---------------------------- //
 export const phrases: PhraseSchema[] = [
     {message: 'Hello World!', footer: 'Someone'},
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
 ];
 
-// -------------------------------------------------------------------- //
-
+// ---------------------------- 🔳 BUTTONS 🔳 ---------------------------- //
 export const buttons: ButtonsSchema = {
     socialButtonEnabled: true,
 };
 
-// -------------------------------------------------------------------- //
+// ---------------------------- 🎨 THEMES 🎨 ---------------------------- //
 export const themes: ThemeSchema = {
     light: {
         main: {
-            background: 'bg-gradient-to-br from-light-background_from to-light-background_to',
-            text: 'text-light-t text-5xl font-bold',
+            background: 'bg-gradient-to-br from-slate-100 to-sky-200',
+            text: 'text-slate-900 text-5xl font-bold',
         },
         button: {
-            background: 'bg-light-button_background hover:bg-light-button_hover_background',
-            text: 'text-light-button_t hover:text-light-button_hover_t',
-            icon: 'text-light-button_icon hover:text-light-button_hover_icon',
+            background: 'bg-sky-500 hover:bg-sky-600',
+            text: 'text-white hover:text-white/90',
+            icon: 'text-white hover:text-white/90',
         },
         card: {
-            background: 'bg-light-cd_background/90',
-            text: 'text-light-cd_t',
-            footer: 'text-light-cd_author',
-            decorationFooter: 'bg-light-cd_footer',
-            decorationText: 'bg-light-cd_decoration hover:bg-light-cd_hover_decoration',
+            background: 'bg-white shadow-lg rounded-lg',
+            text: 'text-slate-800',
+            footer: 'text-sky-600',
+            decorationFooter: 'bg-slate-200',
+            decorationText: 'bg-sky-500 hover:bg-sky-600',
         },
     },
     dark: {
         main: {
-            background: 'bg-gradient-to-br from-dark-background_from to-dark-background_to',
-            text: 'dark:text-dark-t text-5xl font-bold',
+            background: 'bg-gradient-to-br from-slate-900 to-slate-800',
+            text: 'text-sky-300 text-5xl font-bold',
         },
         button: {
-            background: 'bg-dark-button_background hover:bg-dark-button_hover_background ',
-            text: 'text-dark-button_t hover:text-dark-button_hover_t',
-            icon: 'text-dark-button_icon hover:text-dark-button_hover_icon',
+            background: 'bg-sky-500 hover:bg-sky-600',
+            text: 'text-white hover:text-white/90',
+            icon: 'text-white hover:text-white/90',
         },
         card: {
-            background: 'bg-dark-cd_background/90',
-            text: 'text-dark-cd_t/90',
-            footer: 'text-dark-cd_author',
-            decorationFooter: 'bg-dark-cd_footer',
-            decorationText: 'dark:bg-dark-cd_decoration dark:hover:bg-dark-cd_hover_decoration',
+            background: 'bg-slate-800/90 rounded-lg shadow-lg',
+            text: 'text-gray-200',
+            footer: 'text-sky-400',
+            decorationFooter: 'bg-white/10',
+            decorationText: 'bg-sky-500 hover:bg-sky-600',
         },
     }
 }
+
