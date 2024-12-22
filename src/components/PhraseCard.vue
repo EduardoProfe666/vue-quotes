@@ -13,7 +13,7 @@ import {
   PhGithubLogo
 } from '@phosphor-icons/vue'
 import {toast} from 'vue-sonner'
-import {buttons} from "../data/data.ts";
+import {buttons, themes} from "../data/data.ts";
 
 const store = usePhraseStore()
 const cardRef = ref<HTMLElement | null>(null)
@@ -54,7 +54,8 @@ const exportAsPng = async () => {
         ref="cardRef"
         class="relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500 animate-fade-in backdrop-blur-sm group"
         :class="[
-        store.isDark ? 'bg-dark-cd_background/90 text-dark-cd_t' : 'bg-light-cd_background/90 text-light-cd_t',
+        store.isDark ? themes.dark.card.background : themes.light.card.background,
+        store.isDark ? themes.dark.card.text : themes.light.card.text,
       ]"
     >
       <div class="flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
@@ -84,7 +85,7 @@ const exportAsPng = async () => {
           <component :is="buttons.socialButtonIcon || PhGithubLogo"
                      :size="24"
                      weight="bold"
-                     class="text-light-button_icon dark:text-dark-button_icon hover:text-light-button_hover_icon dark:hover:text-dark-button_hover_icon"
+                     :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
           />
         </Button>
       </a>
@@ -99,7 +100,7 @@ const exportAsPng = async () => {
             :is="store.isDark ? (buttons.darkModeIcon || PhSun) : (buttons.lightModeIcon || PhMoon)"
             :size="24"
             weight="bold"
-            class="text-light-button_icon dark:text-dark-button_icon hover:text-light-button_hover_icon dark:hover:text-dark-button_hover_icon"
+            :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
         />
       </Button>
     </div>

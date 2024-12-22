@@ -2,7 +2,7 @@
 import {onBeforeMount, onMounted} from 'vue'
 import { usePhraseStore } from './stores/phrases'
 import PhraseCard from './components/PhraseCard.vue'
-import {generals, metadata} from "./data/data.ts";
+import {generals, metadata, themes} from "./data/data.ts";
 
 const store = usePhraseStore()
 
@@ -69,11 +69,13 @@ onBeforeMount(() => {
 
 <template>
   <main 
-    class="min-h-screen transition-colors duration-500 bg-gradient-to-br from-light-background_from to-light-background_to dark:from-dark-background_from dark:to-dark-background_to"
+    class="min-h-screen transition-colors duration-500"
+    :class="store.isDark ? themes.dark.main.background : themes.light.main.background"
   >
     <div class="container mx-auto py-12">
       <h1
-        class="text-5xl font-bold text-center mb-12 text-light-t dark:text-dark-t animate-slide-down"
+        class="text-center mb-12 animate-slide-down"
+        :class="store.isDark ? themes.dark.main.text : themes.light.main.text"
       >
         {{ generals.title }}
       </h1>

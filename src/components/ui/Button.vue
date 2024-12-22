@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import {usePhraseStore} from "../../stores/phrases.ts";
+import {themes} from "../../data/data.ts";
+
 defineProps<{
   disabled?: boolean
   variant?: 'primary' | 'icon'
 }>()
+
+const store = usePhraseStore();
 </script>
 
 <template>
@@ -13,8 +18,8 @@ defineProps<{
       variant === 'icon' 
         ? 'p-3 rounded-full hover:scale-110' 
         : 'px-6 py-3 rounded-xl hover:scale-105',
-      'bg-light-button_background text-light-button_t hover:bg-light-button_hover_background hover:text-light-button_hover_t',
-      'dark:bg-dark-button_background dark:text-dark-button_t dark:hover:bg-dark-button_hover_background dark:hover:text-dark-button_hover_t',
+      store.isDark ? themes.dark.button.background : themes.light.button.background,
+      store.isDark ? themes.dark.button.text : themes.light.button.text,
       'disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed'
     ]"
   >

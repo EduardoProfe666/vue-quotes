@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { PhraseSchema } from '../../types/phrase-schema.ts'
-import {generals} from "../../data/data.ts";
+import {generals, themes} from "../../data/data.ts";
 
 defineProps<{
   phrase: PhraseSchema | undefined
@@ -14,14 +14,15 @@ defineProps<{
       class="relative animate-slide-up"
     >
       <div 
-        class="absolute -left-6 top-0 h-full w-1 bg-light-cd_decoration hover:bg-light-cd_hover_decoration dark:bg-dark-cd_decoration dark:hover:bg-dark-cd_hover_decoration rounded-full transform transition-all duration-300 group-hover:scale-y-110"
+        class="absolute -left-6 top-0 h-full w-1 rounded-full transform transition-all duration-300 group-hover:scale-y-110"
+        :class="isDark ? themes.dark.card.decorationText : themes.light.card.decorationText"
       />
       <p 
         class="text-3xl md:text-4xl lg:text-5xl font-display leading-relaxed tracking-tight"
         :class="[
           isDark 
-            ? 'text-dark-cd_t/90'
-            : 'text-light-cd_t',
+            ? themes.dark.card.text
+            : themes.light.card.text,
         ]"
       >
         "{{ phrase?.message }}"
@@ -35,16 +36,16 @@ defineProps<{
       <div 
         class="h-0.5 flex-1"
         :class="[
-          isDark ? 'bg-dark-cd_footer' : 'bg-light-cd_footer',
+          isDark ? themes.dark.card.decorationFooter : themes.light.card.decorationFooter,
         ]"
       />
       <p 
         class="font-display text-xl italic"
         :class="[
-          isDark ? 'text-dark-cd_author' : 'text-light-cd_author',
+          isDark ? themes.dark.card.footer : themes.light.card.footer,
         ]"
       >
-        {{ generals.author || phrase?.footer || 'Anonymous'  }}
+        {{ phrase?.footer || generals?.author  || 'Anonymous'  }}
       </p>
     </div>
   </div>

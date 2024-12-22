@@ -12,7 +12,7 @@ export const usePhraseStore = defineStore('phrases', {
 
     getters: {
         currentPhrase: (state) => state.phrases[state.currentIndex],
-        currentPhraseImage: (state) => generals.authorImage || state.phrases[state.currentIndex]?.image || '/author.png',
+        currentPhraseImage: (state) => state.phrases[state.currentIndex]?.image || generals?.authorImage || '/author.png',
         totalPhrases: (state) => state.phrases.length,
     },
 
