@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { PhCaretLeft, PhCaretRight } from '@phosphor-icons/vue'
+import {computed} from 'vue'
+import {PhCaretLeft, PhCaretRight} from '@phosphor-icons/vue'
+import {themes} from "../../data/data.ts";
+import {usePhraseStore} from "../../stores/phrases.ts";
 
 const props = defineProps<{
   isDark: boolean
@@ -10,6 +12,7 @@ const props = defineProps<{
   swipeStrength?: number
 }>()
 
+const store = usePhraseStore();
 const buttonClasses = computed(() => [
   'nav-button absolute top-1/2 z-20',
   'transition-all duration-300',
@@ -25,7 +28,7 @@ const buttonClasses = computed(() => [
         :disabled="isAnimating"
         :class="[buttonClasses, 'left-4 hover:-translate-x-1']"
     >
-      <PhCaretLeft :size="32" weight="bold" />
+      <PhCaretLeft :size="32" weight="bold" :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"/>
     </button>
 
     <button
@@ -33,7 +36,8 @@ const buttonClasses = computed(() => [
         :disabled="isAnimating"
         :class="[buttonClasses, 'right-4 hover:translate-x-1']"
     >
-      <PhCaretRight :size="32" weight="bold" />
+      <PhCaretRight :size="32" weight="bold"
+                    :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"/>
     </button>
 
     <div
