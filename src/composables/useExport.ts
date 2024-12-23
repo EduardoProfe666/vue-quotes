@@ -22,6 +22,7 @@ export function useExport() {
 
             const dataUrl = await toPng(element, {
                 quality: 0.95,
+                pixelRatio: 3,
                 cacheBust: true
             })
 
