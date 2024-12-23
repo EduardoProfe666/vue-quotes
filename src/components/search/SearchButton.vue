@@ -13,8 +13,7 @@ const isModalOpen = ref(false)
 <template>
   <div v-if="search.enabled">
     <Button
-        variant="icon"
-        class="shadow-lg"
+        variant="dock"
         :title="search.buttonTooltip || 'Search Quotes'"
         @click="isModalOpen = true"
     >
