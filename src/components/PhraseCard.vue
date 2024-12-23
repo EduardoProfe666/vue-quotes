@@ -46,8 +46,8 @@ const cardClasses = computed(() => [
   store.isDark ? themes.dark.card.background : themes.light.card.background,
   store.isDark ? themes.dark.card.text : themes.light.card.text,
   {
-    'slide-left': slideDirection === 'left',
-    'slide-right': slideDirection === 'right'
+    'slide-left': slideDirection.value === 'left',
+    'slide-right': slideDirection.value === 'right'
   }
 ])
 </script>
