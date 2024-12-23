@@ -27,7 +27,7 @@ export function useExport() {
             })
 
             downloadImage(dataUrl, 'phrase.png')
-            toast.success(buttons.exportSuccessNotification || 'Export Phrase Successfully')
+            toast.success(buttons.exportSuccessNotification || 'Successfully Exported Phrase')
         } catch (error) {
             console.error('Error exporting image:', error)
             toast.error(buttons.exportFailedNotification || 'Export Failed. Try later')
