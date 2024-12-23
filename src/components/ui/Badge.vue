@@ -40,6 +40,6 @@ const badgeClasses = computed(() => [
         weight="fill"
         class="group-hover:animate-pulse"
     />
-    <span>{{ badge.name }}</span>
+    <span>{{ store.getCurrentLanguagePhrase('', badge.name) }}</span>
   </div>
 </template>

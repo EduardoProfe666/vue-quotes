@@ -6,11 +6,13 @@ import {ThemeSchema} from "../types/theme-schema.ts";
 import BadgeSchema from "../types/badge-schema.ts";
 import {PhSparkle} from "@phosphor-icons/vue";
 import {SearchSchema} from "../types/search-schema.ts";
+import LanguageSchema from "../types/language-schema.ts";
 
 // ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
 export const generals: GeneralsSchema = {
     title: 'Quotes',
     randomPhrases: true,
+    internationalizationEnabled: true,
 };
 
 // ---------------------------- 🔮 METADATA 🔮 ---------------------------- //
@@ -31,7 +33,14 @@ export const badges: BadgeSchema[] = [
 
 // ---------------------------- 🗣️ PHRASES 🗣️ ---------------------------- //
 export const phrases: PhraseSchema[] = [
-    {message: 'Hello World!', footer: 'Someone', badgeId: 'new'},
+    {
+        message: [
+            {languageId: 'en', message: 'Hello World!'},
+            {languageId: 'es', message: 'Hola Mundo!'}
+        ],
+        footer: 'Someone',
+        badgeId: 'new'
+    },
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
 ];
 
@@ -39,6 +48,12 @@ export const phrases: PhraseSchema[] = [
 export const buttons: ButtonsSchema = {
     socialButtonEnabled: true,
 };
+
+// ---------------------------- 🌐 LANGUAGES 🌐 ---------------------------- //
+export const languages: LanguageSchema[] = [
+    {id: 'es', name: 'Español'},
+    {id: 'en', name: 'English'},
+].sort((a, b) => a.name.localeCompare(b.name));
 
 // ---------------------------- 🔍 SEARCH 🔍 ---------------------------- //
 export const search: SearchSchema = {

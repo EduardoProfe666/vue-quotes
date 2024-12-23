@@ -1,7 +1,9 @@
+import InternationalizationSchema from "./internationalization-schema.ts";
+
 export interface SearchSchema {
     enabled: boolean;
-    placeholder?: string;
-    noResultsText?: string;
-    buttonTooltip?: string;
-    modalTitle?: string;
+    placeholder?: string | InternationalizationSchema[];
+    noResultsText?: string | InternationalizationSchema[];
+    buttonTooltip?: string | InternationalizationSchema[];
+    modalTitle?: string | InternationalizationSchema[];
 }

@@ -14,7 +14,7 @@ const isModalOpen = ref(false)
   <div v-if="search.enabled">
     <Button
         variant="dock"
-        :title="search.buttonTooltip || 'Search Quotes'"
+        :title="store.getCurrentLanguagePhrase('Search Quotes', search.buttonTooltip)"
         @click="isModalOpen = true"
     >
       <PhMagnifyingGlass

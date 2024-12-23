@@ -28,6 +28,7 @@
     "tailwindcss-bg-patterns": "^0.3.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.2",
+    "vite-plugin-vue-devtools": "^7.6.8",
     "vue-tsc": "^2.1.4"
   }
 }

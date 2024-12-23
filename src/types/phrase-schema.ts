@@ -1,6 +1,8 @@
+import InternationalizationSchema from "./internationalization-schema.ts";
+
 export interface PhraseSchema {
-  message: string;
-  footer?: string;
+  message: string | InternationalizationSchema[];
+  footer?: string | InternationalizationSchema[];
   image?: string;
   badgeId?: string;
 }

@@ -43,13 +43,13 @@ const themeClasses = computed(() => store.isDark ? themes.dark.search : themes.l
             class="text-lg font-display leading-relaxed mb-2"
             :class="themeClasses.resultText"
         >
-          "{{ phrase.message }}"
+          "{{ store.getCurrentLanguagePhrase('', phrase.message) }}"
         </p>
         <p
             class="text-sm"
             :class="themeClasses.resultSubtext"
         >
-          {{ phrase.footer }}
+          {{ store.getCurrentLanguagePhrase('', phrase.footer) }}
         </p>
       </div>
 

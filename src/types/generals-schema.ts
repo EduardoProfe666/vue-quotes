@@ -1,6 +1,9 @@
+import InternationalizationSchema from "./internationalization-schema.ts";
+
 export interface GeneralsSchema {
     title: string;
     randomPhrases: boolean;
-    author?: string;
+    internationalizationEnabled: boolean;
+    author?: string | InternationalizationSchema[];
     authorImage?: string;
 }

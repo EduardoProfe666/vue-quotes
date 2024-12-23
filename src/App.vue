@@ -11,16 +11,16 @@ onMounted(async () => {
 })
 
 onBeforeMount(() => {
-  document.title = metadata.title || '🗣️ Quotes 🗣️';
+  document.title = store.getCurrentLanguagePhrase('🗣️ Quotes 🗣️', metadata.title);
 
   // Description
   const newDescriptionMetaTag = document.createElement('meta');
   newDescriptionMetaTag.name = 'description';
-  newDescriptionMetaTag.content = metadata.description || 'Some good quotes';
+  newDescriptionMetaTag.content = store.getCurrentLanguagePhrase('Some good quotes', metadata.description);
   document.head.appendChild(newDescriptionMetaTag);
 
   // Language
-  document.documentElement.lang = metadata.language || 'en';
+  document.documentElement.lang = store.getCurrentLanguagePhrase('en', metadata.language);
 
   // Author
   const newAuthorMetaTag = document.createElement('meta');
@@ -32,13 +32,13 @@ onBeforeMount(() => {
   // Title
   const newOgTitleMetaTag = document.createElement('meta');
   newOgTitleMetaTag.setAttribute('property', 'og:title');
-  newOgTitleMetaTag.content = metadata.title || '🗣️ Quotes 🗣️';
+  newOgTitleMetaTag.content = store.getCurrentLanguagePhrase('🗣️ Quotes 🗣️', metadata.title);
   document.head.appendChild(newOgTitleMetaTag);
 
   // Description
   const newOgDescriptionMetaTag = document.createElement('meta');
   newOgDescriptionMetaTag.setAttribute('property', 'og:description');
-  newOgDescriptionMetaTag.content = metadata.description || 'Some good quotes';
+  newOgDescriptionMetaTag.content = store.getCurrentLanguagePhrase('Some good quotes', metadata.description);
   document.head.appendChild(newOgDescriptionMetaTag);
 
   // Url
@@ -50,13 +50,13 @@ onBeforeMount(() => {
   // Site Name
   const newOgSiteNameMetaTag = document.createElement('meta');
   newOgSiteNameMetaTag.setAttribute('property', 'og:site_name');
-  newOgSiteNameMetaTag.content = metadata.title || '🗣️ Quotes 🗣️';
+  newOgSiteNameMetaTag.content = store.getCurrentLanguagePhrase('🗣️ Quotes 🗣️', metadata.title);
   document.head.appendChild(newOgSiteNameMetaTag);
 
   // Locale
   const newOgLocaleMetaTag = document.createElement('meta');
   newOgLocaleMetaTag.setAttribute('property', 'og:locale');
-  newOgLocaleMetaTag.content = metadata.locale || 'en_US';
+  newOgLocaleMetaTag.content = store.getCurrentLanguagePhrase('en_US', metadata.locale);
   document.head.appendChild(newOgLocaleMetaTag);
 
   // Locale
@@ -77,7 +77,7 @@ onBeforeMount(() => {
         class="text-center mb-12 animate-slide-down"
         :class="store.isDark ? themes.dark.main.text : themes.light.main.text"
       >
-        {{ generals.title }}
+        {{ store.getCurrentLanguagePhrase('', generals.title) }}
       </h1>
       <PhraseCard />
     </div>

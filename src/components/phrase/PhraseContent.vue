@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import type { PhraseSchema } from '../../types/phrase-schema.ts'
 import {generals, themes} from "../../data/data.ts";
+import {usePhraseStore} from "../../stores/phrases.ts";
 
 defineProps<{
   phrase: PhraseSchema | undefined
   isDark: boolean
 }>()
+
+const store = usePhraseStore();
 </script>
 
 <template>
@@ -25,7 +28,7 @@ defineProps<{
             : themes.light.card.text,
         ]"
       >
-        "{{ phrase?.message }}"
+        "{{ store.getCurrentLanguagePhrase('', phrase?.message) }}"
       </p>
     </blockquote>
     
@@ -45,7 +48,7 @@ defineProps<{
           isDark ? themes.dark.card.footer : themes.light.card.footer,
         ]"
       >
-        {{ phrase?.footer || generals?.author  || 'Anonymous'  }}
+        {{ store.getCurrentLanguagePhrase('Anonymous', phrase?.footer || generals?.author) }}
       </p>
     </div>
   </div>

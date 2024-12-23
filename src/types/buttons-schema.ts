@@ -1,21 +1,22 @@
 import {DefineComponent, PropType} from "vue";
+import InternationalizationSchema from "./internationalization-schema.ts";
 
 export interface ButtonsSchema {
-    previousText?: string;
+    previousText?: string | InternationalizationSchema[];
     previousIcon?: IconComponent;
-    nextText?: string;
+    nextText?: string | InternationalizationSchema[];
     nextIcon?: IconComponent;
-    exportText?: string;
-    exportActiveText?: string;
+    exportText?: string | InternationalizationSchema[];
+    exportActiveText?: string | InternationalizationSchema[];
     exportIcon?: IconComponent;
-    exportSuccessNotification?: string;
-    exportFailedNotification?: string;
-    lightModeTooltipText?: string;
+    exportSuccessNotification?: string | InternationalizationSchema[];
+    exportFailedNotification?: string | InternationalizationSchema[];
+    lightModeTooltipText?: string | InternationalizationSchema[];
     lightModeIcon?: IconComponent;
-    darkModeTooltipText?: string;
+    darkModeTooltipText?: string | InternationalizationSchema[];
     darkModeIcon?: IconComponent;
     socialButtonEnabled: boolean;
-    socialButtonText?: string;
+    socialButtonText?: string | InternationalizationSchema[];
     socialButtonIcon?: IconComponent;
     socialButtonLink?: string;
 }

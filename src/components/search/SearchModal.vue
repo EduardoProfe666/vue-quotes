@@ -18,8 +18,8 @@ const searchResults = computed(() => {
 
   const query = searchInput.value.toLowerCase()
   return store.phrases.filter(phrase =>
-      phrase.message.toLowerCase().includes(query) ||
-      (phrase.footer?.toLowerCase().includes(query)) ||
+      store.getCurrentLanguagePhrase('',phrase.message).toLowerCase().includes(query) ||
+      (store.getCurrentLanguagePhrase('',phrase.footer)?.toLowerCase().includes(query)) ||
       (phrase.badgeId && store.getBadgeName(phrase.badgeId).toLowerCase().includes(query))
   )
 })
@@ -63,7 +63,7 @@ const themeClasses = computed(() => store.isDark ? themes.dark.search : themes.l
             ref="inputRef"
             v-model="searchInput"
             type="text"
-            :placeholder="search.placeholder || 'Search quotes, authors, or badges...'"
+            :placeholder="store.getCurrentLanguagePhrase('Search quotes, authors, or badges...', search.placeholder)"
             class="w-full pl-12 pr-4 py-4 outline-none border-b"
             :class="[
             themeClasses.inputBackground,
@@ -92,7 +92,7 @@ const themeClasses = computed(() => store.isDark ? themes.dark.search : themes.l
         <div v-if="searchResults.length" class="p-2">
           <SearchResult
               v-for="result in searchResults"
-              :key="result.message"
+              :key="store.getCurrentLanguagePhrase('', result.message)"
               :phrase="result"
               @select="emit('close')"
           />
@@ -102,7 +102,7 @@ const themeClasses = computed(() => store.isDark ? themes.dark.search : themes.l
             class="p-8 text-center"
             :class="themeClasses.resultSubtext"
         >
-          {{ search.noResultsText || 'No results found'}}
+          {{store.getCurrentLanguagePhrase('No results found', search.noResultsText)}}
         </div>
       </div>
     </div>

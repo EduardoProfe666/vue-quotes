@@ -29,7 +29,7 @@ defineProps<{
     >
       <Button
           variant="dock"
-          :title="buttons.socialButtonText || 'My Portfolio'"
+          :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialButtonText)"
       >
         <component
             :is="buttons.socialButtonIcon || PhGithubLogo"
@@ -42,7 +42,7 @@ defineProps<{
     <SearchButton/>
     <Button
         variant="dock"
-        :title="isExporting ? 'Exporting...' : 'Export Image'"
+        :title="isExporting ? store.getCurrentLanguagePhrase('Exporting...', buttons.exportActiveText) : store.getCurrentLanguagePhrase('Export Image', buttons.exportText)"
         :disabled="isExporting"
         @click="exportAsPng(cardRef)"
     >
@@ -55,7 +55,7 @@ defineProps<{
     <Button
         variant="dock"
         @click="store.toggleDarkMode"
-        :title="store.isDark ? (buttons.darkModeTooltipText || 'Change to Light Mode') : (buttons.lightModeTooltipText || 'Change to Dark Mode')"
+        :title="store.isDark ? (store.getCurrentLanguagePhrase('Change to Light Mode', buttons.darkModeTooltipText)) : (store.getCurrentLanguagePhrase('Change to Dark Mode', buttons.lightModeTooltipText))"
     >
       <component
           :is="store.isDark ? (buttons.darkModeIcon || PhSun) : (buttons.lightModeIcon || PhMoon)"

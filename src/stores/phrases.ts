@@ -1,6 +1,7 @@
-import { defineStore } from 'pinia'
-import type { PhraseSchema } from '../types/phrase-schema'
-import { generals, phrases, badges } from "../data/data"
+import {defineStore} from 'pinia'
+import type {PhraseSchema} from '../types/phrase-schema'
+import {generals, phrases, badges, languages} from "../data/data"
+import InternationalizationSchema from "../types/internationalization-schema.ts";
 
 export const usePhraseStore = defineStore('phrases', {
     state: () => ({
@@ -8,6 +9,7 @@ export const usePhraseStore = defineStore('phrases', {
         currentIndex: 0,
         isDark: false,
         isLoading: false,
+        currentLanguage: languages[0]?.id || 'en',
     }),
 
     getters: {
@@ -33,7 +35,7 @@ export const usePhraseStore = defineStore('phrases', {
         },
 
         getBadgeName(badgeId: string) {
-            return badges.find(b => b.id === badgeId)?.name || '';
+            return this.getCurrentLanguagePhrase('', badges.find(b => b.id === badgeId)?.name);
         },
 
         nextPhrase() {
@@ -55,6 +57,29 @@ export const usePhraseStore = defineStore('phrases', {
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
+        },
+
+        getCurrentLanguage() {
+            return this.currentLanguage;
+        },
+
+        setCurrentLanguage(languageId: string) {
+            if (languages.find(x => x.id === languageId)) {
+                this.currentLanguage = languageId;
+            }
+        },
+
+        getCurrentLanguagePhrase(fallbackValue: string, element?: string | InternationalizationSchema[]) {
+            if (!element) {
+                return fallbackValue;
+            }
+
+            if (typeof element === 'string')
+                return element;
+
+            const value = element.find(x => x.languageId === this.currentLanguage);
+            return value ? value.message : fallbackValue;
+
         }
     }
 })
