@@ -28,7 +28,7 @@ const buttonClasses = computed(() => [
         :disabled="isAnimating"
         :class="[buttonClasses, 'left-4 hover:-translate-x-1']"
     >
-      <PhCaretLeft :size="32" weight="bold" :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"/>
+      <PhCaretLeft :size="32" weight="bold" :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"/>
     </button>
 
     <button
@@ -37,7 +37,7 @@ const buttonClasses = computed(() => [
         :class="[buttonClasses, 'right-4 hover:translate-x-1']"
     >
       <PhCaretRight :size="32" weight="bold"
-                    :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"/>
+                    :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"/>
     </button>
 
     <div

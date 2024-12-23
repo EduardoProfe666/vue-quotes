@@ -1,7 +1,6 @@
 import { ref } from 'vue'
-import type { PhraseStore } from '../stores/phrases'
 
-export function useCardAnimation(store: PhraseStore) {
+export function useCardAnimation(store: any) {
     const isAnimating = ref(false)
     const slideDirection = ref<'left' | 'right' | null>(null)
     const animationDuration = 500 // ms

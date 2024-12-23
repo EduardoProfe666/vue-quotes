@@ -12,6 +12,7 @@ export interface Theme{
         background: string;
         text: string;
         icon: string;
+        navIcon: string;
     }
     card: {
         background: string;

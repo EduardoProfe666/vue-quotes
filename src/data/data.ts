@@ -35,6 +35,7 @@ export const themes: ThemeSchema = {
             background: 'bg-sky-500 hover:bg-sky-600',
             text: 'text-white hover:text-white/90',
             icon: 'text-white hover:text-white/90',
+            navIcon: 'text-slate-800 hover:text-slate-800/90',
         },
         card: {
             background: 'bg-white shadow-lg rounded-lg',
@@ -53,6 +54,7 @@ export const themes: ThemeSchema = {
             background: 'bg-sky-500 hover:bg-sky-600',
             text: 'text-white hover:text-white/90',
             icon: 'text-white hover:text-white/90',
+            navIcon: 'text-white hover:text-white/90',
         },
         card: {
             background: 'bg-slate-800/90 rounded-lg shadow-lg',

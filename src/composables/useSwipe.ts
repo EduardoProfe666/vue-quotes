@@ -12,7 +12,6 @@ export function useSwipe({
                              onSwipeLeft,
                              onSwipeRight,
                              threshold = 50,
-                             minSwipeDistance = 30,
                              resistance = 0.8
                          }: SwipeOptions) {
     const touchStartX = ref(0)

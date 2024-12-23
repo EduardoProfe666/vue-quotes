@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="w-full md:w-1/3 relative group">
+  <div class="w-full md:w-1/2 lg:w-1/3 relative group">
     <div
       class="absolute inset-0"
     />
@@ -14,7 +14,7 @@ defineProps<{
       :src="imageUrl"
       :key="imageUrl"
       alt="Author"
-      class="w-full h-64 md:h-96 object-cover transition-transform duration-300 group-hover:scale-105 rounded-effect"
+      class="w-full h-72 md:h-96 object-contain md:object-cover transition-transform duration-300 group-hover:scale-105 rounded-effect"
     />
   </div>
 </template>
