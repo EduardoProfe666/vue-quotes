@@ -16,7 +16,7 @@ const store = usePhraseStore();
       class="group flex items-center gap-2 transition-all duration-300"
       :class="[
       variant === 'dock'
-        ? 'p-3 rounded-xl hover:bg-white/10'
+        ? 'p-3 rounded-xl'
         : variant === 'icon'
           ? 'p-3 rounded-full hover:scale-110'
           : 'px-6 py-3 rounded-xl hover:scale-105',
