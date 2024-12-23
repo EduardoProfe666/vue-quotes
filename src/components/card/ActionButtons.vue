@@ -8,12 +8,15 @@ import {
   PhSun,
   PhMoon,
   PhGithubLogo,
-  PhDownload,
+  PhDownload, PhGlobe,
 } from '@phosphor-icons/vue'
-import {buttons, themes} from "../../data/data"
+import {buttons, generals, themes} from "../../data/data"
+import {ref} from "vue";
+import LanguageModal from "../language/LanguageModal.vue";
 
 const store = usePhraseStore()
 const {isExporting, exportAsPng} = useExport()
+const isLanguageModalOpen = ref(false)
 
 defineProps<{
   cardRef: HTMLElement | null
@@ -52,6 +55,21 @@ defineProps<{
           :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
       />
     </Button>
+    <Button
+        v-if="generals.internationalizationEnabled"
+        variant="dock"
+        :title="store.getCurrentLanguagePhrase('Select Language', buttons.languageButtonText)"
+        @click="isLanguageModalOpen = true"
+    >
+      <PhGlobe
+          :size="24"
+          weight="bold"
+          :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
+      />
+    </Button>
+    <Teleport to="body">
+      <LanguageModal v-if="isLanguageModalOpen" @close="isLanguageModalOpen = false" />
+    </Teleport>
     <Button
         variant="dock"
         @click="store.toggleDarkMode"

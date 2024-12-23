@@ -32,5 +32,12 @@ export interface Theme{
         resultHover: string;
         resultText: string;
         resultSubtext: string;
+    },
+    internationalization: {
+        modalBackground: string;
+        itemBackground: string;
+        itemText: string;
+        selectedBackground: string;
+        selectedText: string;
     }
 }

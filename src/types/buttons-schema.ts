@@ -19,6 +19,7 @@ export interface ButtonsSchema {
     socialButtonText?: string | InternationalizationSchema[];
     socialButtonIcon?: IconComponent;
     socialButtonLink?: string;
+    languageButtonText?: string | InternationalizationSchema[];
 }
 
 export type IconComponent =  DefineComponent<{

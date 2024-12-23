@@ -92,6 +92,13 @@ export const themes: ThemeSchema = {
             resultText: 'text-gray-900',
             resultSubtext: 'text-gray-600'
         },
+        internationalization: {
+            modalBackground: 'bg-white',
+            itemBackground: 'hover:bg-sky-100',
+            itemText: '',
+            selectedText: 'font-semibold text-sky-600',
+            selectedBackground: 'bg-sky-200',
+        }
     },
     dark: {
         main: {
@@ -122,6 +129,13 @@ export const themes: ThemeSchema = {
             resultHover: 'hover:bg-slate-700/50',
             resultText: 'text-white',
             resultSubtext: 'text-gray-400'
+        },
+        internationalization: {
+            modalBackground: 'bg-slate-800',
+            itemBackground: 'hover:bg-sky-700',
+            itemText: 'text-sky-300',
+            selectedText: 'font-semibold text-sky-300',
+            selectedBackground: 'bg-sky-800',
         }
     }
 }
