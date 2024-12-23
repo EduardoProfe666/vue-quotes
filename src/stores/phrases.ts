@@ -1,6 +1,6 @@
-import {defineStore} from 'pinia'
-import type {PhraseSchema} from '../types/phrase-schema.ts'
-import {generals, phrases} from "../data/data.ts";
+import { defineStore } from 'pinia'
+import type { PhraseSchema } from '../types/phrase-schema'
+import { generals, phrases, badges } from "../data/data"
 
 export const usePhraseStore = defineStore('phrases', {
     state: () => ({
@@ -26,6 +26,14 @@ export const usePhraseStore = defineStore('phrases', {
                 this.phrases = phrases;
 
             this.isLoading = false;
+        },
+
+        setCurrentIndex(index: number) {
+            this.currentIndex = index;
+        },
+
+        getBadgeName(badgeId: string) {
+            return badges.find(b => b.id === badgeId)?.name || '';
         },
 
         nextPhrase() {

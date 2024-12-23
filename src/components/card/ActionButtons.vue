@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Button from '../ui/Button.vue'
+import SearchButton from '../search/SearchButton.vue'
 import {usePhraseStore} from '../../stores/phrases'
 import {useExport} from '../../composables/useExport'
 import {
@@ -35,6 +36,8 @@ defineProps<{
         />
       </Button>
     </a>
+
+    <SearchButton />
 
     <Button
         variant="icon"

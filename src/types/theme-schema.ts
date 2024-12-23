@@ -21,4 +21,16 @@ export interface Theme{
         decorationFooter: string;
         footer: string;
     }
+    search: {
+        modalBackground: string;
+        inputBackground: string;
+        inputText: string;
+        inputPlaceholder: string;
+        inputBorder: string;
+        closeButton: string;
+        closeButtonHover: string;
+        resultHover: string;
+        resultText: string;
+        resultSubtext: string;
+    }
 }

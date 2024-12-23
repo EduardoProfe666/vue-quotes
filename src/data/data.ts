@@ -5,6 +5,7 @@ import {ButtonsSchema} from "../types/buttons-schema.ts";
 import {ThemeSchema} from "../types/theme-schema.ts";
 import BadgeSchema from "../types/badge-schema.ts";
 import {PhSparkle} from "@phosphor-icons/vue";
+import {SearchSchema} from "../types/search-schema.ts";
 
 // ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
 export const generals: GeneralsSchema = {
@@ -39,6 +40,11 @@ export const buttons: ButtonsSchema = {
     socialButtonEnabled: true,
 };
 
+// ---------------------------- 🔍 SEARCH 🔍 ---------------------------- //
+export const search: SearchSchema = {
+    enabled: true,
+};
+
 // ---------------------------- 🎨 THEMES 🎨 ---------------------------- //
 export const themes: ThemeSchema = {
     light: {
@@ -59,6 +65,18 @@ export const themes: ThemeSchema = {
             decorationFooter: 'bg-slate-200',
             decorationText: 'bg-sky-500 hover:bg-sky-600',
         },
+        search: {
+            modalBackground: 'bg-white',
+            inputBackground: 'bg-white',
+            inputText: 'text-gray-900',
+            inputPlaceholder: 'text-gray-500',
+            inputBorder: 'border-gray-200',
+            closeButton: 'text-gray-500',
+            closeButtonHover: 'hover:bg-gray-100 hover:text-gray-700',
+            resultHover: 'hover:bg-gray-50',
+            resultText: 'text-gray-900',
+            resultSubtext: 'text-gray-600'
+        },
     },
     dark: {
         main: {
@@ -78,6 +96,18 @@ export const themes: ThemeSchema = {
             decorationFooter: 'bg-white/10',
             decorationText: 'bg-sky-500 hover:bg-sky-600',
         },
+        search: {
+            modalBackground: 'bg-slate-800',
+            inputBackground: 'bg-slate-800',
+            inputText: 'text-white',
+            inputPlaceholder: 'text-gray-400',
+            inputBorder: 'border-gray-700',
+            closeButton: 'text-gray-400',
+            closeButtonHover: 'hover:bg-gray-700 hover:text-gray-200',
+            resultHover: 'hover:bg-slate-700/50',
+            resultText: 'text-white',
+            resultSubtext: 'text-gray-400'
+        }
     }
 }
 
