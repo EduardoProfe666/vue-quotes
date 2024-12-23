@@ -3,6 +3,8 @@ import {PhraseSchema} from "../types/phrase-schema.ts";
 import {GeneralsSchema} from "../types/generals-schema.ts";
 import {ButtonsSchema} from "../types/buttons-schema.ts";
 import {ThemeSchema} from "../types/theme-schema.ts";
+import BadgeSchema from "../types/badge-schema.ts";
+import {PhSparkle} from "@phosphor-icons/vue";
 
 // ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
 export const generals: GeneralsSchema = {
@@ -13,9 +15,22 @@ export const generals: GeneralsSchema = {
 // ---------------------------- 🔮 METADATA 🔮 ---------------------------- //
 export const metadata: MetadataSchema = {};
 
+// ---------------------------- 💎 BADGES 💎 ---------------------------- //
+export const badges: BadgeSchema[] = [
+    {
+        id: 'new',
+        name: 'New',
+        icon: PhSparkle,
+        background: 'bg-emerald-100/90 hover:bg-emerald-200/95',
+        backgroundDark: 'bg-emerald-500/20 hover:bg-emerald-500/30',
+        text: 'text-emerald-950',
+        textDark: 'text-emerald-300'
+    }
+];
+
 // ---------------------------- 🗣️ PHRASES 🗣️ ---------------------------- //
 export const phrases: PhraseSchema[] = [
-    {message: 'Hello World!', footer: 'Someone'},
+    {message: 'Hello World!', footer: 'Someone', badgeId: 'new'},
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
 ];
 

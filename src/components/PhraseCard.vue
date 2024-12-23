@@ -56,7 +56,7 @@ const cardClasses = computed(() => [
   <div class="w-full max-w-5xl mx-auto p-4">
     <div
         ref="cardRef"
-        :class="cardClasses"
+        :class="[cardClasses, 'group']"
         :style="cardStyle"
         @touchstart.passive="handleTouchStart"
         @touchmove.passive="handleTouchMove"
