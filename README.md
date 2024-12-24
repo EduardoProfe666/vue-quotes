@@ -1,8 +1,8 @@
-# Frases de ChocolateMC UI 🍫
+# Vue Quotes 🗣️
 
 <div align="center">
 
-![Choco](/public/banner.png)
+![Vue Quotes](/public/banner.png)
 
 [![Made with Vue][vue-badge]][vue-url]
 [![Made with Vite][vite-badge]][vite-url]
@@ -11,7 +11,7 @@
 [![License][license-badge]][license-url]
 [![PRs Welcome][prs-badge]][prs-url]
 
-_An UI to present ChocolateMC famous phrases, built with Vue 3 + Vite + TypeScript_
+_A fully customizable app to show phrases, built with `Vue 3` + `Vite` + `TypeScript`_
 
 </div>
 
