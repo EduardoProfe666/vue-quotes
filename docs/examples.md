@@ -1,8 +1,8 @@
-# Examples
+# 📝 Examples
 
 Discover various implementations of Vue Quotes, each showcasing different use cases and customizations.
 
-## Available Implementations
+## 📚 Available Implementations
 
 ### 🎭 Famous Quotes Mix
 
@@ -81,7 +81,7 @@ Inspiring quotes from the Khaly Flow Europa (El Ambiental) (Spanish Only).
 [🛠️ View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
 [🚀 View Demo](https://github.com/EduardoProfe666/famous-quotes-mix)
 
-## Creating Your Own Implementation
+## 🏗️ Creating Your Own Implementation
 
 Want to create your own implementation? Follow these steps:
 

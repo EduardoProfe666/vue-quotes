@@ -1,8 +1,8 @@
-# Languages Configuration
+# 🌐 Languages Configuration
 
 Configure supported languages for internationalization.
 
-## Schema
+## 📜 Schema
 
 ```ts
 interface LanguageSchema {
@@ -11,19 +11,19 @@ interface LanguageSchema {
 }
 ```
 
-## Properties
+## 🏷️ Properties
 
 ### id
 - Type: `string`
 - Required: `true`
-- Description: Language identifier (e.g., 'en', 'es')
+- Description: Language identifier (e.g., `en`, `es`)
 
 ### name
 - Type: `string`
 - Required: `true`
 - Description: Display name of the language
 
-## Example
+## ✨ Example
 
 ```ts
 export const languages: LanguageSchema[] = [
@@ -32,7 +32,7 @@ export const languages: LanguageSchema[] = [
 ].sort((a, b) => a.name.localeCompare(b.name))
 ```
 
-## Usage with Internationalization
+## 💡 Usage with Internationalization
 
 To use multiple languages:
 

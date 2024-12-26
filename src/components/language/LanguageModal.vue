@@ -26,7 +26,9 @@ const themeClasses = computed(() => store.isDark ? themes.dark : themes.light)
   >
     <div class="w-full max-w-md mt-[15vh] relative rounded-lg overflow-hidden shadow-lg transition-transform transform animate-modal-slide-down" :class="themeClasses.internationalization.modalBackground">
       <div class="p-6">
-        <h2 :class="themeClasses.internationalization.itemText" class="text-xl font-bold mb-4 text-center">{{ store.getCurrentLanguagePhrase('Select Language', buttons.languageButtonText) }}</h2>
+        <h2 :class="themeClasses.internationalization.itemText" class="text-xl font-bold mb-4 text-center">{{
+            store.getCurrentLanguagePhrase('Select Language', buttons.languageText)
+          }}</h2>
         <ul>
           <li
               v-for="language in languages"

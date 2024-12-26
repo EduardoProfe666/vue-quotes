@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { PhCaretLeft, PhCaretRight } from '@phosphor-icons/vue'
+import {PhCaretLeft, PhCaretRight} from '@phosphor-icons/vue'
 import {buttons, themes} from "../../data/data"
 import { usePhraseStore } from "../../stores/phrases"
 
@@ -33,7 +33,8 @@ const buttonClasses = computed(() => [
         :class="[buttonClasses, 'left-4 hover:-translate-x-1']"
         :title="store.getCurrentLanguagePhrase('Previous quote', buttons?.previousText)"
     >
-      <PhCaretLeft
+      <component
+          :is="buttons.previousIcon || PhCaretLeft"
           :size="28"
           weight="bold"
           :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"
@@ -46,7 +47,8 @@ const buttonClasses = computed(() => [
         :class="[buttonClasses, 'right-4 hover:translate-x-1']"
         :title="store.getCurrentLanguagePhrase('Next quote', buttons?.nextText)"
     >
-      <PhCaretRight
+      <component
+          :is="buttons.nextIcon || PhCaretRight"
           :size="28"
           weight="bold"
           :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"

@@ -1,8 +1,8 @@
-# Phrases Configuration
+# 💭 Phrases Configuration
 
 The `phrases` array contains all quotes in your application.
 
-## Schema
+## 📜 Schema
 
 ```ts
 interface PhraseSchema {
@@ -13,7 +13,7 @@ interface PhraseSchema {
 }
 ```
 
-## Properties
+## 🏷️ Properties
 
 ### message
 - Type: `string | InternationalizationSchema[]`
@@ -24,18 +24,21 @@ interface PhraseSchema {
 - Type: `string | InternationalizationSchema[]`
 - Required: `false`
 - Description: Quote attribution or author
+- Default: Value in `author` of `generals` or `Anonymous`
 
 ### image
 - Type: `string`
 - Required: `false`
 - Description: URL of an image associated with the quote
+- Default: Value in `authorImage` of `generals` or `/author.png`
 
 ### badgeId
 - Type: `string`
 - Required: `false`
 - Description: ID of a badge to apply to this quote
+- Default: Not Render any Badge
 
-## Example
+## ✨ Example
 
 ```ts
 export const phrases: PhraseSchema[] = [

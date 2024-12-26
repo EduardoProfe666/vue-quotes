@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { PhMagnifyingGlass } from '@phosphor-icons/vue'
+import {PhMagnifyingGlass} from '@phosphor-icons/vue'
 import SearchModal from './SearchModal.vue'
 import Button from '../ui/Button.vue'
 import { usePhraseStore } from '../../stores/phrases'
-import { themes, search } from '../../data/data'
+import {themes, search, buttons} from '../../data/data'
 
 const store = usePhraseStore()
 const isModalOpen = ref(false)
@@ -14,10 +14,11 @@ const isModalOpen = ref(false)
   <div v-if="search.enabled">
     <Button
         variant="dock"
-        :title="store.getCurrentLanguagePhrase('Search Quotes', search.buttonTooltip)"
+        :title="store.getCurrentLanguagePhrase('Search Quotes', buttons.searchText)"
         @click="isModalOpen = true"
     >
-      <PhMagnifyingGlass
+      <component
+          :is="buttons.searchIcon || PhMagnifyingGlass"
           :size="24"
           weight="bold"
           :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"

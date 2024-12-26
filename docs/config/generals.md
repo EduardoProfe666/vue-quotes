@@ -1,8 +1,8 @@
-# Generals Configuration
+# 🎯 Generals Configuration
 
 The `generals` object controls basic application settings.
 
-## Schema
+## 📜 Schema
 
 ```ts
 interface GeneralsSchema {
@@ -14,7 +14,7 @@ interface GeneralsSchema {
 }
 ```
 
-## Properties
+## 🏷️ Properties
 
 ### title
 - Type: `string`
@@ -29,26 +29,28 @@ interface GeneralsSchema {
 ### internationalizationEnabled
 - Type: `boolean`
 - Required: `true`
-- Description: Enable/disable multi-language support
+- Description: Enable/disable multi-language support. If set to `false`, the app will not render the `internationalization button`
 
 ### author
 - Type: `string | InternationalizationSchema[]`
 - Required: `false`
 - Description: Default author for quotes without specified authors
+- Default: `Anonymous`
 
 ### authorImage
 - Type: `string`
 - Required: `false`
 - Description: Default image URL for quotes without images
+- Default: `/author.png`
 
-## Example
+## ✨ Example
 
 ```ts
 export const generals: GeneralsSchema = {
   title: 'Quotes',
   randomPhrases: false,
   internationalizationEnabled: true,
-  author: 'Anonymous',
-  authorImage: '/author.png'
+  author: 'Incredible Author',
+  authorImage: '/my-author.png'
 }
 ```

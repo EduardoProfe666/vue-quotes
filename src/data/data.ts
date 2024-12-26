@@ -8,17 +8,17 @@ import {PhSparkle} from "@phosphor-icons/vue";
 import {SearchSchema} from "../types/search-schema.ts";
 import LanguageSchema from "../types/language-schema.ts";
 
-// ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
+// ---------------------------- 🎯 GENERALS 🎯 ---------------------------- //
 export const generals: GeneralsSchema = {
     title: 'Quotes',
     randomPhrases: false,
     internationalizationEnabled: true,
 };
 
-// ---------------------------- 🔮 METADATA 🔮 ---------------------------- //
+// ---------------------------- 📝 METADATA 📝 ---------------------------- //
 export const metadata: MetadataSchema = {};
 
-// ---------------------------- 💎 BADGES 💎 ---------------------------- //
+// ---------------------------- 🏷️ BADGES 🏷️ ---------------------------- //
 export const badges: BadgeSchema[] = [
     {
         id: 'new',
@@ -31,7 +31,7 @@ export const badges: BadgeSchema[] = [
     }
 ];
 
-// ---------------------------- 🗣️ PHRASES 🗣️ ---------------------------- //
+// ---------------------------- 💭 PHRASES 💭 ---------------------------- //
 export const phrases: PhraseSchema[] = [
     {
         message: [
@@ -44,9 +44,9 @@ export const phrases: PhraseSchema[] = [
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
 ];
 
-// ---------------------------- 🔳 BUTTONS 🔳 ---------------------------- //
+// ---------------------------- 🔘 BUTTONS 🔘 ---------------------------- //
 export const buttons: ButtonsSchema = {
-    socialButtonEnabled: true,
+    socialEnabled: true,
 };
 
 // ---------------------------- 🌐 LANGUAGES 🌐 ---------------------------- //

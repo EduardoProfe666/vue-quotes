@@ -1,8 +1,11 @@
-# Badges Configuration
+# 🏷️ Badges Configuration
 
 Badges help categorize and highlight special quotes in your collection.
 
-## Schema
+## 📜 Schema
+
+> [!IMPORTANT]
+> `IconComponent` refers to a [Phosphor Icon](https://phosphoricons.com/) schema
 
 ```ts
 interface BadgeSchema {
@@ -16,7 +19,7 @@ interface BadgeSchema {
 }
 ```
 
-## Properties
+## 🏷️ Properties
 
 ### id
 - Type: `string`
@@ -32,28 +35,29 @@ interface BadgeSchema {
 - Type: `IconComponent`
 - Required: `false`
 - Description: Phosphor icon component
+- Default: Not Render Icon
 
 ### background
 - Type: `string`
 - Required: `true`
-- Description: Badge background color class (light mode)
+- Description: Badge background color classes in Tailwind (light mode)
 
 ### backgroundDark
 - Type: `string`
 - Required: `true`
-- Description: Badge background color class (dark mode)
+- Description: Badge background color classes in Tailwind (dark mode)
 
 ### text
 - Type: `string`
 - Required: `true`
-- Description: Badge text color class (light mode)
+- Description: Badge text color classes in Tailwind (light mode)
 
 ### textDark
 - Type: `string`
 - Required: `true`
-- Description: Badge text color class (dark mode)
+- Description: Badge text color classes in Tailwind (dark mode)
 
-## Example
+## ✨ Example
 
 ```ts
 import { PhSparkle } from "@phosphor-icons/vue"

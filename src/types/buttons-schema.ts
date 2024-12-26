@@ -15,11 +15,14 @@ export interface ButtonsSchema {
     lightModeIcon?: IconComponent;
     darkModeTooltipText?: string | InternationalizationSchema[];
     darkModeIcon?: IconComponent;
-    socialButtonEnabled: boolean;
-    socialButtonText?: string | InternationalizationSchema[];
-    socialButtonIcon?: IconComponent;
-    socialButtonLink?: string;
-    languageButtonText?: string | InternationalizationSchema[];
+    socialEnabled: boolean;
+    socialText?: string | InternationalizationSchema[];
+    socialIcon?: IconComponent;
+    socialLink?: string;
+    languageText?: string | InternationalizationSchema[];
+    languageIcon?: IconComponent;
+    searchText?: string | InternationalizationSchema[];
+    searchIcon?: IconComponent;
 }
 
 export type IconComponent =  DefineComponent<{

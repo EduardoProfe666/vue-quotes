@@ -26,17 +26,17 @@ defineProps<{
 <template>
   <DockContainer>
     <a
-        :href="buttons.socialButtonLink || 'https://eduardoprofe666.github.io'"
+        :href="buttons.socialLink || 'https://eduardoprofe666.github.io'"
         target="_blank"
         rel="noopener noreferrer"
     >
       <Button
           class="hover:scale-125"
           variant="dock"
-          :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialButtonText)"
+          :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialText)"
       >
         <component
-            :is="buttons.socialButtonIcon || PhGithubLogo"
+            :is="buttons.socialIcon || PhGithubLogo"
             :size="24"
             weight="bold"
             :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
@@ -51,7 +51,8 @@ defineProps<{
         :disabled="isExporting"
         @click="exportAsPng(cardRef)"
     >
-      <PhDownload
+      <component
+          :is="buttons.exportIcon || PhDownload"
           :size="24"
           weight="bold"
           :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
@@ -61,10 +62,11 @@ defineProps<{
         class="hover:scale-125"
         v-if="generals.internationalizationEnabled"
         variant="dock"
-        :title="store.getCurrentLanguagePhrase('Select Language', buttons.languageButtonText)"
+        :title="store.getCurrentLanguagePhrase('Select Language', buttons.languageText)"
         @click="isLanguageModalOpen = true"
     >
-      <PhGlobe
+      <component
+          :is="buttons.languageIcon || PhGlobe"
           :size="24"
           weight="bold"
           :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"

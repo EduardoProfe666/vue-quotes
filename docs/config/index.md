@@ -13,13 +13,13 @@ export const generals: GeneralsSchema = { ... }
 // SEO & Meta
 export const metadata: MetadataSchema = { ... }
 
-// Quote Categories
+// Quote Badges
 export const badges: BadgeSchema[] = [ ... ]
 
 // Content
 export const phrases: PhraseSchema[] = [ ... ]
 
-// UI Elements
+// Buttons UI
 export const buttons: ButtonsSchema = { ... }
 
 // Internationalization

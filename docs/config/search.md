@@ -1,20 +1,18 @@
-# Search Configuration
+# 🔍 Search Configuration
 
 Configure the search functionality of your application.
 
-## Schema
+## 📜 Schema
 
 ```ts
 interface SearchSchema {
   enabled: boolean;
   placeholder?: string | InternationalizationSchema[];
   noResultsText?: string | InternationalizationSchema[];
-  buttonTooltip?: string | InternationalizationSchema[];
-  modalTitle?: string | InternationalizationSchema[];
 }
 ```
 
-## Properties
+## 🏷️ Properties
 
 ### enabled
 - Type: `boolean`
@@ -25,23 +23,15 @@ interface SearchSchema {
 - Type: `string | InternationalizationSchema[]`
 - Required: `false`
 - Description: Search input placeholder text
+- Default: `Search quotes, authors, or badges...`
 
 ### noResultsText
 - Type: `string | InternationalizationSchema[]`
 - Required: `false`
 - Description: Text shown when no results are found
+- Default: `No results found`
 
-### buttonTooltip
-- Type: `string | InternationalizationSchema[]`
-- Required: `false`
-- Description: Search button tooltip text
-
-### modalTitle
-- Type: `string | InternationalizationSchema[]`
-- Required: `false`
-- Description: Search modal title
-
-## Example
+## ✨ Example
 
 ```ts
 export const search: SearchSchema = {

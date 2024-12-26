@@ -59,7 +59,7 @@ onBeforeMount(() => {
   newOgLocaleMetaTag.content = store.getCurrentLanguagePhrase('en_US', metadata.locale);
   document.head.appendChild(newOgLocaleMetaTag);
 
-  // Locale
+  // Image
   const newOgImageMetaTag = document.createElement('meta');
   newOgImageMetaTag.setAttribute('property', 'og:image');
   newOgImageMetaTag.content = metadata.image || 'https://raw.githubusercontent.com/EduardoProfe666/choco-frases-ui/refs/heads/main/public/banner.png';
