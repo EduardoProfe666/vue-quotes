@@ -142,6 +142,6 @@ export const languages: LanguageSchema[] = [
 
 ## 🤝 Need Help?
 
-- 📖 Check our [detailed documentation](/guide/)
-- 💡 View [implementations](/implementations)
+- 📖 Check our [detailed documentation](/config/)
+- 💡 View [examples](/examples)
 - 🐛 Report issues on [GitHub](https://github.com/EduardoProfe666/vue-quotes/issues)

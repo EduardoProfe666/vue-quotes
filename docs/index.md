@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /guide/quick-start
     - theme: alt
       text: View on GitHub
       link: https://github.com/EduardoProfe666/vue-quotes

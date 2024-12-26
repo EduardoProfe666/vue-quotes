@@ -31,6 +31,10 @@ Vue Quotes is a powerful and elegant application designed to showcase and manage
 - ⚡ **High Performance**: Built with Vue 3 and Vite for optimal speed
 - 🎯 **TypeScript**: Full type safety and better developer experience
 
+## 📚 Documentation
+
+For detailed documentation on how to use and configure Vue Quotes, please refer to the [docs](https://vue-quotes.onrender.com)
+
 ## 🚀 Installation & Setup
 
 1. Clone the repository:
@@ -99,7 +103,7 @@ Heartbreak and moving on quotes.
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🎭 American Presidents Quotes
-Historical quotes from American presidents (English only).  
+Historical quotes from American presidents (English Only).  
 [View Project](https://github.com/EduardoProfe666/presidents-quotes)
 [View Demo](https://famous-quotes-mix.onrender.com)
 
@@ -109,12 +113,12 @@ Uplifting quotes available in seven different languages.
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🍫 ChocolateMC Phrases
-Inspiring quotes from Chocolate MC.  
+Inspiring quotes from Chocolate MC (Spanish Only).  
 [View Project](https://github.com/EduardoProfe666/chocolate-mc-quotes)
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🤨 KhalyFlowEuropa Phrases
-Inspiring quotes from the Khaly Flow Europa.
+Inspiring quotes from the Khaly Flow Europa alias El Ambiental (Spanish Only).
 [View Project](https://github.com/EduardoProfe666/ambiental-quotes)
 [View Demo](https://famous-quotes-mix.onrender.com)
 

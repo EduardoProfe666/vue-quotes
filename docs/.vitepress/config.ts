@@ -12,7 +12,7 @@ export default defineConfig({
         nav: [
             { text: 'Guide', link: '/guide/' },
             { text: 'Configuration', link: '/config/' },
-            { text: 'Implementations', link: '/implementations' }
+            { text: 'Examples', link: '/examples' }
         ],
         sidebar: {
             '/guide/': [
@@ -20,8 +20,7 @@ export default defineConfig({
                     text: 'Getting Started',
                     items: [
                         { text: 'Introduction', link: '/guide/' },
-                        { text: 'Quick Start', link: '/guide/quick-start.md' },
-                        { text: 'Installation', link: '/guide/installation' }
+                        { text: 'Quick Start', link: '/guide/quick-start.md' }
                     ]
                 }
             ],
