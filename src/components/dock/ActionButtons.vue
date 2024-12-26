@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import Button from '../ui/Button.vue'
 import SearchButton from '../search/SearchButton.vue'
-import DockContainer from '../dock/DockContainer.vue'
-import {usePhraseStore} from '../../stores/phrases'
-import {useExport} from '../../composables/useExport'
+import DockContainer from './DockContainer.vue'
+import {usePhraseStore} from '../../stores/phrases.ts'
+import {useExport} from '../../composables/useExport.ts'
 import {
   PhSun,
   PhMoon,
   PhGithubLogo,
   PhDownload, PhGlobe,
 } from '@phosphor-icons/vue'
-import {buttons, generals, themes} from "../../data/data"
+import {buttons, generals, search, themes} from "../../data/data.ts"
 import {ref} from "vue";
 import LanguageModal from "../language/LanguageModal.vue";
 
@@ -25,39 +25,6 @@ defineProps<{
 
 <template>
   <DockContainer>
-    <a
-        :href="buttons.socialLink || 'https://eduardoprofe666.github.io'"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-      <Button
-          class="hover:scale-125"
-          variant="dock"
-          :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialText)"
-      >
-        <component
-            :is="buttons.socialIcon || PhGithubLogo"
-            :size="24"
-            weight="bold"
-            :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
-        />
-      </Button>
-    </a>
-    <SearchButton class="hover:scale-125"/>
-    <Button
-        class="hover:scale-125"
-        variant="dock"
-        :title="isExporting ? store.getCurrentLanguagePhrase('Exporting...', buttons.exportActiveText) : store.getCurrentLanguagePhrase('Export Image', buttons.exportText)"
-        :disabled="isExporting"
-        @click="exportAsPng(cardRef)"
-    >
-      <component
-          :is="buttons.exportIcon || PhDownload"
-          :size="24"
-          weight="bold"
-          :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
-      />
-    </Button>
     <Button
         class="hover:scale-125"
         v-if="generals.internationalizationEnabled"
@@ -75,6 +42,21 @@ defineProps<{
     <Teleport to="body">
       <LanguageModal v-if="isLanguageModalOpen" @close="isLanguageModalOpen = false" />
     </Teleport>
+    <SearchButton v-if="search.enabled" class="hover:scale-125"/>
+    <Button
+        class="hover:scale-125"
+        variant="dock"
+        :title="isExporting ? store.getCurrentLanguagePhrase('Exporting...', buttons.exportActiveText) : store.getCurrentLanguagePhrase('Export Image', buttons.exportText)"
+        :disabled="isExporting"
+        @click="exportAsPng(cardRef)"
+    >
+      <component
+          :is="buttons.exportIcon || PhDownload"
+          :size="24"
+          weight="bold"
+          :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
+      />
+    </Button>
     <Button
         class="hover:scale-125"
         variant="dock"
@@ -88,5 +70,24 @@ defineProps<{
           :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
       />
     </Button>
+    <a
+        :href="buttons.socialLink || 'https://eduardoprofe666.github.io'"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+      <Button
+          v-if="buttons.socialEnabled"
+          class="hover:scale-125"
+          variant="dock"
+          :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialText)"
+      >
+        <component
+            :is="buttons.socialIcon || PhGithubLogo"
+            :size="24"
+            weight="bold"
+            :class="store.isDark ? themes.dark.button.icon : themes.light.button.icon"
+        />
+      </Button>
+    </a>
   </DockContainer>
 </template>

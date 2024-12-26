@@ -83,43 +83,75 @@ For detailed documentation on how to use and configure Vue Quotes, please refer 
 Here are some example implementations of Vue Quotes:
 
 ### 🎭 Famous Quotes Mix
-A collection of famous quotes from various sources.  
-[View Project](https://github.com/EduardoProfe666/famous-quotes-mix)
+
+![banner](/public/1.png)
+
+A collection of famous quotes from various sources.
+
+[View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### ✝️ Christian Phrases
+
+![banner](/public/2.png)
+
 A collection of Christian inspirational quotes.  
-[View Project](https://github.com/EduardoProfe666/christian-quotes)
+
+[View Project](https://github.com/EduardoProfe666/christian-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### ❤️ Love Phrases
+
+![banner](/public/3.png)
+
 Beautiful love quotes and romantic messages.  
-[View Project](https://github.com/EduardoProfe666/love-quotes)
+
+[View Project](https://github.com/EduardoProfe666/love-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 💔 Heartbreak Phrases
+
+![banner](/public/4.png)
+
 Heartbreak and moving on quotes.  
-[View Project](https://github.com/EduardoProfe666/heartbreak-quotes)
+
+[View Project](https://github.com/EduardoProfe666/heartbreak-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🎭 American Presidents Quotes
-Historical quotes from American presidents (English Only).  
-[View Project](https://github.com/EduardoProfe666/presidents-quotes)
+
+![banner](/public/5.png)
+
+Historical quotes from American presidents (English Only).
+
+[View Project](https://github.com/EduardoProfe666/presidents-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 😊 Joy Quotes in 7 Languages
+
+![banner](/public/6.png)
+
 Uplifting quotes available in seven different languages.  
-[View Project](https://github.com/EduardoProfe666/joy-quotes)
+
+[View Project](https://github.com/EduardoProfe666/joy-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🍫 ChocolateMC Phrases
+
+![banner](/public/7.png)
+
 Inspiring quotes from Chocolate MC (Spanish Only).  
-[View Project](https://github.com/EduardoProfe666/chocolate-mc-quotes)
+
+[View Project](https://github.com/EduardoProfe666/chocolate-mc-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ### 🤨 KhalyFlowEuropa Phrases
+
+![banner](/public/8.png)
+
 Inspiring quotes from the Khaly Flow Europa alias El Ambiental (Spanish Only).
-[View Project](https://github.com/EduardoProfe666/ambiental-quotes)
+
+[View Project](https://github.com/EduardoProfe666/ambiental-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
 ## 🤝 Contributing
