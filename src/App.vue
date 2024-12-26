@@ -77,7 +77,7 @@ onBeforeMount(() => {
         class="text-center mb-12 animate-slide-down"
         :class="store.isDark ? themes.dark.main.text : themes.light.main.text"
       >
-        {{ store.getCurrentLanguagePhrase('', generals.title) }}
+        {{ store.getCurrentLanguagePhrase('Quotes', generals.title) }}
       </h1>
       <PhraseCard />
     </div>
