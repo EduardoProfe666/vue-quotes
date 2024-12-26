@@ -1,11 +1,14 @@
-import { ref } from 'vue'
-import { toPng } from 'html-to-image'
-import { downloadImage } from '../utils/image'
-import { toast } from 'vue-sonner'
-import { buttons } from '../data/data'
+import {ref} from 'vue'
+import {toPng} from 'html-to-image'
+import {downloadImage} from '../utils/image'
+import {toast} from 'vue-sonner'
+import {buttons} from '../data/data'
+import {usePhraseStore} from "../stores/phrases.ts";
 
 export function useExport() {
     const isExporting = ref(false)
+
+    const store = usePhraseStore();
 
     const exportAsPng = async (element: HTMLElement | null) => {
         if (!element) return
@@ -33,10 +36,10 @@ export function useExport() {
             })
 
             downloadImage(dataUrl, 'phrase.png')
-            toast.success(buttons.exportSuccessNotification || 'Successfully Exported Phrase')
+            toast.success(store.getCurrentLanguagePhrase('Successfully Exported Phrase', buttons.exportSuccessNotification))
         } catch (error) {
             console.error('Error exporting image:', error)
-            toast.error(buttons.exportFailedNotification || 'Export Failed. Try later')
+            toast.error( store.getCurrentLanguagePhrase('Export Failed. Try later', buttons.exportFailedNotification))
         } finally {
             navButtons.forEach(button => {
                 (button as any).style.display = '';
