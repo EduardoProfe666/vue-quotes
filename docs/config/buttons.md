@@ -180,5 +180,50 @@ interface ButtonsSchema {
 ```ts
 export const buttons: ButtonsSchema = {
     socialEnabled: true,
+    exportActiveText: [
+        {languageId: 'en', message: 'Exporting...'},
+        {languageId: 'es', message: 'Exportando...'}
+    ],
+    exportSuccessNotification: [
+        {languageId: 'en', message: 'Successfully Exported Phrase'},
+        {languageId: 'es', message: 'Frase exportada con éxito'}
+    ],
+    exportFailedNotification: [
+        {languageId: 'en', message: 'Export Failed. Try later'},
+        {languageId: 'es', message: 'Exportación fallida. Intente más tarde'}
+    ],
+    lightModeTooltipText: [
+        {languageId: 'en', message: 'Change to Dark Mode'},
+        {languageId: 'es', message: 'Cambiar a Modo Oscuro'}
+    ],
+    darkModeTooltipText: [
+        {languageId: 'en', message: 'Change to Light Mode'},
+        {languageId: 'es', message: 'Cambiar a Modo Claro'}
+    ],
+    exportText: [
+        {languageId: 'en', message: 'Export Image'},
+        {languageId: 'es', message: 'Exportado a Imagen'},
+    ],
+    nextText: [
+        {languageId: 'en', message: 'Next Quote'},
+        {languageId: 'es', message: 'Siguiente Frase'},
+    ],
+    previousText: [
+        {languageId: 'en', message: 'Previous Quote'},
+        {languageId: 'es', message: 'Anterior Frase'},
+    ],
+    languageText: [
+        {languageId: 'en', message: 'Select Language'},
+        {languageId: 'es', message: 'Seleccionar Lenguaje'},
+    ],
+    searchText: [
+        {languageId: 'en', message: 'Search Quotes'},
+        {languageId: 'es', message: 'Buscar Frases'},
+    ],
+    socialText: [
+        {languageId: 'en', message: 'My Portfolio'},
+        {languageId: 'es', message: 'Mi Portfolio'},
+    ],
+    socialLink: 'https://eduardoprofe666.github.io'
 };
 ```
