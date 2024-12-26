@@ -42,7 +42,6 @@ export const phrases: PhraseSchema[] = [
         badgeId: 'new'
     },
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
-    {message: 'vue-quotes sucks', footer: 'A non-awesome guy'},
 ];
 
 // ---------------------------- 🔳 BUTTONS 🔳 ---------------------------- //
