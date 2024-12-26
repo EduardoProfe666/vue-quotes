@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'
+import {computed, ref} from 'vue'
 
 interface SwipeOptions {
     onSwipeLeft: () => void
@@ -11,8 +11,8 @@ interface SwipeOptions {
 export function useSwipe({
                              onSwipeLeft,
                              onSwipeRight,
-                             threshold = 50,
-                             resistance = 0.8
+                             threshold = 100,
+                             resistance = 0.5
                          }: SwipeOptions) {
     const touchStartX = ref(0)
     const touchStartY = ref(0)
@@ -20,7 +20,7 @@ export function useSwipe({
     const touchEndY = ref(0)
     const isDragging = ref(false)
     const dragDistance = ref(0)
-    const swipeProgress = ref(0)
+    const swipeDirection = ref<'left' | 'right' | null>(null)
 
     const swipeStrength = computed(() => {
         const progress = Math.abs(dragDistance.value) / threshold
@@ -28,7 +28,7 @@ export function useSwipe({
     })
 
     const handleTouchStart = (e: TouchEvent | MouseEvent) => {
-        if ('touches' in e && e.touches.length > 1) return // Prevent multi-touch
+        if ('touches' in e && e.touches.length > 1) return
 
         const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
         const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY
@@ -37,7 +37,7 @@ export function useSwipe({
         touchStartY.value = clientY
         isDragging.value = true
         dragDistance.value = 0
-        swipeProgress.value = 0
+        swipeDirection.value = null
     }
 
     const handleTouchMove = (e: TouchEvent | MouseEvent) => {
@@ -52,17 +52,18 @@ export function useSwipe({
         const deltaX = touchEndX.value - touchStartX.value
         const deltaY = Math.abs(touchEndY.value - touchStartY.value)
 
-        // Apply resistance to make the drag feel more natural
-        const resistedDeltaX = deltaX * resistance
-
-        if (deltaY > Math.abs(deltaX)) {
+        if (deltaY > Math.abs(deltaX) * 0.8) {
             isDragging.value = false
+            dragDistance.value = 0
             return
         }
 
-        dragDistance.value = resistedDeltaX
-        swipeProgress.value = (resistedDeltaX / threshold) * 100
-        e.preventDefault()
+        dragDistance.value = deltaX * resistance
+        swipeDirection.value = deltaX > 0 ? 'right' : 'left'
+
+        if (Math.abs(deltaX) > 10) {
+            e.preventDefault()
+        }
     }
 
     const handleTouchEnd = () => {
@@ -76,13 +77,11 @@ export function useSwipe({
             } else {
                 onSwipeLeft()
             }
-        } else {
-            // Spring back animation if threshold not met
-            dragDistance.value = 0
-            swipeProgress.value = 0
         }
 
         isDragging.value = false
+        dragDistance.value = 0
+        swipeDirection.value = null
     }
 
     return {
@@ -91,7 +90,7 @@ export function useSwipe({
         handleTouchEnd,
         isDragging,
         dragDistance,
-        swipeProgress,
+        swipeDirection,
         swipeStrength
     }
 }

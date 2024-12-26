@@ -31,7 +31,7 @@ defineProps<{
         rel="noopener noreferrer"
     >
       <Button
-          class="hover:animate-pulse-scale"
+          class="hover:scale-125"
           variant="dock"
           :title="store.getCurrentLanguagePhrase('My Portfolio', buttons.socialButtonText)"
       >
@@ -43,9 +43,9 @@ defineProps<{
         />
       </Button>
     </a>
-    <SearchButton class="hover:animate-pulse-scale"/>
+    <SearchButton class="hover:scale-125"/>
     <Button
-        class="hover:animate-pulse-scale"
+        class="hover:scale-125"
         variant="dock"
         :title="isExporting ? store.getCurrentLanguagePhrase('Exporting...', buttons.exportActiveText) : store.getCurrentLanguagePhrase('Export Image', buttons.exportText)"
         :disabled="isExporting"
@@ -58,7 +58,7 @@ defineProps<{
       />
     </Button>
     <Button
-        class="hover:animate-pulse-scale"
+        class="hover:scale-125"
         v-if="generals.internationalizationEnabled"
         variant="dock"
         :title="store.getCurrentLanguagePhrase('Select Language', buttons.languageButtonText)"
@@ -74,7 +74,7 @@ defineProps<{
       <LanguageModal v-if="isLanguageModalOpen" @close="isLanguageModalOpen = false" />
     </Teleport>
     <Button
-        class="hover:animate-pulse-scale"
+        class="hover:scale-125"
         variant="dock"
         @click="store.toggleDarkMode"
         :title="store.isDark ? (store.getCurrentLanguagePhrase('Change to Light Mode', buttons.darkModeTooltipText)) : (store.getCurrentLanguagePhrase('Change to Dark Mode', buttons.lightModeTooltipText))"

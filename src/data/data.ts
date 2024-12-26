@@ -11,7 +11,7 @@ import LanguageSchema from "../types/language-schema.ts";
 // ---------------------------- 🧩 GENERALS 🧩 ---------------------------- //
 export const generals: GeneralsSchema = {
     title: 'Quotes',
-    randomPhrases: true,
+    randomPhrases: false,
     internationalizationEnabled: true,
 };
 
@@ -42,6 +42,7 @@ export const phrases: PhraseSchema[] = [
         badgeId: 'new'
     },
     {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
+    {message: 'vue-quotes sucks', footer: 'A non-awesome guy'},
 ];
 
 // ---------------------------- 🔳 BUTTONS 🔳 ---------------------------- //

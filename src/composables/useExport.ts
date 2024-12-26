@@ -11,6 +11,12 @@ export function useExport() {
         if (!element) return
         isExporting.value = true
 
+        const navButtons = element.querySelectorAll('.nav-button');
+
+        navButtons.forEach(button => {
+            (button as any).style.display = 'none';
+        });
+
         try {
             const img = element.querySelector('img')
             if (img) {
@@ -32,6 +38,9 @@ export function useExport() {
             console.error('Error exporting image:', error)
             toast.error(buttons.exportFailedNotification || 'Export Failed. Try later')
         } finally {
+            navButtons.forEach(button => {
+                (button as any).style.display = '';
+            });
             isExporting.value = false
         }
     }

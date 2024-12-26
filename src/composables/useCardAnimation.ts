@@ -23,8 +23,9 @@ export function useCardAnimation(store: any) {
         })
     }
 
-    const navigateNext = () => animate('left', store.nextPhrase)
-    const navigatePrevious = () => animate('right', store.previousPhrase)
+    // Invertimos la dirección de la animación para que coincida con la dirección del botón
+    const navigateNext = () => animate('right', store.nextPhrase)
+    const navigatePrevious = () => animate('left', store.previousPhrase)
 
     return {
         isAnimating,

@@ -1,23 +1,27 @@
 <script setup lang="ts">
-import {computed} from 'vue'
-import {PhCaretLeft, PhCaretRight} from '@phosphor-icons/vue'
-import {themes} from "../../data/data.ts";
-import {usePhraseStore} from "../../stores/phrases.ts";
+import { computed } from 'vue'
+import { PhCaretLeft, PhCaretRight } from '@phosphor-icons/vue'
+import {buttons, themes} from "../../data/data"
+import { usePhraseStore } from "../../stores/phrases"
 
 const props = defineProps<{
   isDark: boolean
   onPrevious: () => void
   onNext: () => void
   isAnimating: boolean
-  swipeStrength?: number
 }>()
 
-const store = usePhraseStore();
+const store = usePhraseStore()
+
 const buttonClasses = computed(() => [
   'nav-button absolute top-1/2 z-20',
   'transition-all duration-300',
   'disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100',
-  props.isDark ? 'text-white/80 hover:text-white' : 'text-black/80 hover:text-black'
+  'backdrop-blur-sm rounded-full p-2',
+  'shadow-lg hover:shadow-xl',
+  props.isDark
+      ? 'bg-white/10 hover:bg-white/20 text-white/90 hover:text-white'
+      : 'bg-black/5 hover:bg-black/10 text-black/80 hover:text-black'
 ])
 </script>
 
@@ -27,23 +31,36 @@ const buttonClasses = computed(() => [
         @click="onPrevious"
         :disabled="isAnimating"
         :class="[buttonClasses, 'left-4 hover:-translate-x-1']"
+        :title="store.getCurrentLanguagePhrase('Previous quote', buttons?.previousText)"
     >
-      <PhCaretLeft :size="32" weight="bold" :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"/>
+      <PhCaretLeft
+          :size="28"
+          weight="bold"
+          :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"
+      />
     </button>
 
     <button
         @click="onNext"
         :disabled="isAnimating"
         :class="[buttonClasses, 'right-4 hover:translate-x-1']"
+        :title="store.getCurrentLanguagePhrase('Next quote', buttons?.nextText)"
     >
-      <PhCaretRight :size="32" weight="bold"
-                    :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"/>
+      <PhCaretRight
+          :size="28"
+          weight="bold"
+          :class="store.isDark ? themes.dark.button.navIcon : themes.light.button.navIcon"
+      />
     </button>
-
-    <div
-        v-if="swipeStrength && swipeStrength > 0"
-        class="swipe-indicator"
-        :style="{ opacity: swipeStrength * 0.5 }"
-    />
   </div>
 </template>
+
+<style scoped>
+.nav-button:hover {
+  transform: scale(1.15);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+</style>

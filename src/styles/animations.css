@@ -1,9 +1,9 @@
 .slide-left {
-    animation: slideLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideLeft 0.3s ease-in-out;
 }
 
 .slide-right {
-    animation: slideRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: slideRight 0.3s ease-in-out;
 }
 
 @keyframes slideLeft {
@@ -11,12 +11,12 @@
         transform: translateX(0);
         opacity: 1;
     }
-    30% {
-        transform: translateX(-40%);
+    50% {
+        transform: translateX(-100%);
         opacity: 0;
     }
-    70% {
-        transform: translateX(20%);
+    51% {
+        transform: translateX(100%);
         opacity: 0;
     }
     100% {
@@ -30,12 +30,12 @@
         transform: translateX(0);
         opacity: 1;
     }
-    30% {
-        transform: translateX(40%);
+    50% {
+        transform: translateX(100%);
         opacity: 0;
     }
-    70% {
-        transform: translateX(-20%);
+    51% {
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
@@ -44,13 +44,6 @@
     }
 }
 
-/* Enhanced drag effect */
-.card-dragging {
-    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-}
-
-/* Improved hover animations */
 @media (hover: hover) {
     .card-hover {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,7 +55,6 @@
     }
 }
 
-/* Navigation button animations */
 .nav-button {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
@@ -74,18 +66,9 @@
     transform: translateY(-50%) scale(1);
 }
 
-/* Add visual feedback for swipe progress */
-.swipe-indicator {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, transparent, currentColor, transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.card-dragging .swipe-indicator {
-    opacity: 0.5;
+@media (max-width: 768px) {
+    .nav-button {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
