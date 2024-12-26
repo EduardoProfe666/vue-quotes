@@ -1,4 +1,3 @@
-<!-- LanguageModal.vue -->
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { usePhraseStore } from '../../stores/phrases'
@@ -9,7 +8,7 @@ const emit = defineEmits<{
 }>()
 
 const store = usePhraseStore()
-const selectedLanguage = ref(store.currentLanguage)
+const selectedLanguage = ref(store.getCurrentLanguage() )
 
 const changeLanguage = (languageId: string) => {
   store.setCurrentLanguage(languageId)

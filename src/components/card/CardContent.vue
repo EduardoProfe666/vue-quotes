@@ -20,7 +20,6 @@ const getBadge = (badgeId: string | undefined) => {
 
 <template>
   <div class="relative flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
-    <!-- Badge Container -->
     <div
         v-if="store.currentPhrase?.badgeId"
         class="absolute top-3 right-3 md:top-4 md:right-4 z-10"

@@ -11,11 +11,9 @@ export function useCardAnimation(store: any) {
         isAnimating.value = true
         slideDirection.value = direction
 
-        // Start animation
         requestAnimationFrame(async () => {
             await action()
 
-            // Reset animation state after completion
             setTimeout(() => {
                 isAnimating.value = false
                 slideDirection.value = null
@@ -23,7 +21,6 @@ export function useCardAnimation(store: any) {
         })
     }
 
-    // Invertimos la dirección de la animación para que coincida con la dirección del botón
     const navigateNext = () => animate('right', store.nextPhrase)
     const navigatePrevious = () => animate('left', store.previousPhrase)
 

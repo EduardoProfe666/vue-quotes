@@ -84,7 +84,6 @@ const themeClasses = computed(() => store.isDark ? themes.dark.search : themes.l
         </button>
       </div>
 
-      <!-- Results -->
       <div
           v-if="searchInput"
           class="max-h-[60vh] overflow-y-auto"

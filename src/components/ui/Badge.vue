@@ -10,19 +10,15 @@ const props = defineProps<{
 const store = usePhraseStore()
 
 const badgeClasses = computed(() => [
-  // Base styles
   'inline-flex items-center gap-1',
   'px-2.5 py-1 md:px-3 md:py-1.5',
   'rounded-full',
   'text-xs font-medium',
-  // Animations and effects
   'transform transition-all duration-300',
   'backdrop-blur-sm',
   'ring-1 ring-inset ring-white/10',
-  // Group hover animations
   'group-hover:scale-105',
   'group-hover:shadow-xl',
-  // Theme colors
   store.isDark ? props.badge.backgroundDark : props.badge.background,
   store.isDark ? props.badge.textDark : props.badge.text,
 ])
