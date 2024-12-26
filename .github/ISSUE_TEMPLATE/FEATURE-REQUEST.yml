@@ -5,31 +5,21 @@ labels:
   - "enhancement"
 
 body:
-  - type: radio
+  - type: checkboxes
     id: feature_type
     attributes:
       label: "Is this a feature with:"
       options:
         - label: "The app"
-          value: "app"
         - label: "The documentation"
-          value: "documentation"
-    validations:
-      required: true
-      exclusive: true
 
-  - type: radio
+  - type: checkboxes
     id: request_type
     attributes:
       label: "Is this request related to:"
       options:
         - label: "A new feature"
-          value: "new_feature"
         - label: "An enhancement of an existing feature"
-          value: "enhancement"
-    validations:
-      required: true
-      exclusive: true
 
   - type: textarea
     id: summary

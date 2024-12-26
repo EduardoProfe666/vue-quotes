@@ -5,18 +5,13 @@ labels:
   - "bug"
 
 body:
-  - type: radio
+  - type: checkboxes
     id: issue_type
     attributes:
       label: "Is this an issue with:"
       options:
         - label: "The app"
-          value: "app"
         - label: "The documentation"
-          value: "documentation"
-    validations:
-      required: true
-      exclusive: true
 
   - type: textarea
     id: description
