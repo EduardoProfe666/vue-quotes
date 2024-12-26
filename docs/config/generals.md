@@ -17,7 +17,7 @@ interface GeneralsSchema {
 ## 🏷️ Properties
 
 ### title
-- Type: `string`
+- Type: `string | InternationalizationSchema[]`
 - Required: `true`
 - Description: The main title of the application
 
