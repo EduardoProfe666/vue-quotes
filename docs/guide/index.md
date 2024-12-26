@@ -40,4 +40,4 @@ Welcome to Vue Quotes! A modern and customizable application for displaying and 
 ## 📚 Next Steps
 - [Quick Start Guide](/guide/quick-start)
 - [Configuration Options](/config/)
-- [View Examples](/examples)
+- [View Implementations](/implementations)

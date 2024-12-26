@@ -76,5 +76,5 @@ export const languages: LanguageSchema[] = [
 
 ## 🤝 Need Help?
 - 📖 Check our [detailed documentation](/guide/)
-- 💡 View [examples](/examples)
+- 💡 View [implementations](/implementations)
 - 🐛 Report issues on [GitHub](https://github.com/EduardoProfe666/vue-quotes/issues)
