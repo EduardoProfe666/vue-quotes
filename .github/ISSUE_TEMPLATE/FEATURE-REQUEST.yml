@@ -1,0 +1,74 @@
+name: "💡 Feature Request"
+description: Create a new feature request.
+title: "💡- <title>"
+labels:
+  - "enhancement"
+
+body:
+  - type: radio
+    id: feature_type
+    attributes:
+      label: "Is this a feature with:"
+      options:
+        - label: "The app"
+          value: "app"
+        - label: "The documentation"
+          value: "documentation"
+    validations:
+      required: true
+      exclusive: true
+
+  - type: radio
+    id: request_type
+    attributes:
+      label: "Is this request related to:"
+      options:
+        - label: "A new feature"
+          value: "new_feature"
+        - label: "An enhancement of an existing feature"
+          value: "enhancement"
+    validations:
+      required: true
+      exclusive: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Description"
+      description: Please provide a brief explanation of the feature.
+      placeholder: Clear and brief explanation of the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "Basic Example"
+      description: Provide some examples of the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: "Impact"
+      description: Indicate the impact that implementing this feature would have.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If necessary, add screenshots.
+      placeholder: Add images in Markdown format -> ![Description](linkImage)
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Extra Information"
+      description: If necessary, provide any additional information.
+    validations:
+      required: false

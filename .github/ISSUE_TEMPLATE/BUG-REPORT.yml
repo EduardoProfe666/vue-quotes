@@ -1,0 +1,68 @@
+name: "🐛 Bug Report"
+description: Create a new bug report.
+title: "🐛- <title>"
+labels:
+  - "bug"
+
+body:
+  - type: radio
+    id: issue_type
+    attributes:
+      label: "Is this an issue with:"
+      options:
+        - label: "The app"
+          value: "app"
+        - label: "The documentation"
+          value: "documentation"
+    validations:
+      required: true
+      exclusive: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description of the problem"
+      description: Please provide a detailed description of the problem.
+      placeholder: Clear and detailed description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Steps to reproduce the problem"
+      description: Please enter the detailed steps to reproduce the problem.
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Traceback"
+      description: Please copy the traceback of the error, that is, the exceptions that appear in the console.
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If necessary, add screenshots of the problem.
+      placeholder: Add images in Markdown format -> ![Description](linkImage)
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Extra Information"
+      description: If necessary, add any other information you consider relevant.
+    validations:
+      required: false
