@@ -17,7 +17,7 @@ const store = usePhraseStore();
       class="relative animate-slide-up"
     >
       <div 
-        class="absolute -left-6 top-0 h-full w-1 rounded-full transform transition-all duration-300 group-hover:scale-y-150"
+        class="absolute -left-6 top-0 h-full w-1 rounded-full transform transition-all duration-300 group-hover:scale-y-110"
         :class="isDark ? themes.dark.card.decorationText : themes.light.card.decorationText"
       />
       <p 
