@@ -1,4 +1,3 @@
-import MetadataSchema from "../types/metadata-schema.ts";
 import {PhraseSchema} from "../types/phrase-schema.ts";
 import {GeneralsSchema} from "../types/generals-schema.ts";
 import {ButtonsSchema} from "../types/buttons-schema.ts";
@@ -14,9 +13,6 @@ export const generals: GeneralsSchema = {
     randomPhrases: false,
     internationalizationEnabled: true,
 };
-
-// ---------------------------- 📝 METADATA 📝 ---------------------------- //
-export const metadata: MetadataSchema = {};
 
 // ---------------------------- 🏷️ BADGES 🏷️ ---------------------------- //
 export const badges: BadgeSchema[] = [
