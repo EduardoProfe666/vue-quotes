@@ -78,31 +78,13 @@ For detailed documentation on how to use and configure Vue Quotes, please refer 
    pnpm run dev
    ```
 
-## 🌟 Implementations
+## 🌟 Demos
 
-Here are some example implementations of Vue Quotes:
-
-### 🎭 Famous Quotes Mix
-
-![banner](/public/1.png)
-
-A collection of famous quotes from various sources.
-
-[View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
-[View Demo](https://famous-quotes-mix.onrender.com)
-
-### ✝️ Christian Phrases
-
-![banner](/public/2.png)
-
-A collection of Christian inspirational quotes.  
-
-[View Project](https://github.com/EduardoProfe666/christian-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
+Here are some example simple apps of Vue Quotes:
 
 ### ❤️ Love Phrases
 
-![banner](/public/3.png)
+![banner](/public/1.png)
 
 Beautiful love quotes and romantic messages.  
 
@@ -111,34 +93,16 @@ Beautiful love quotes and romantic messages.
 
 ### 💔 Heartbreak Phrases
 
-![banner](/public/4.png)
+![banner](/public/2.png)
 
 Heartbreak and moving on quotes.  
 
 [View Project](https://github.com/EduardoProfe666/heartbreak-quotes) |
 [View Demo](https://famous-quotes-mix.onrender.com)
 
-### 🎭 American Presidents Quotes
-
-![banner](/public/5.png)
-
-Historical quotes from American presidents (English Only).
-
-[View Project](https://github.com/EduardoProfe666/presidents-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
-
-### 😊 Joy Quotes in 7 Languages
-
-![banner](/public/6.png)
-
-Uplifting quotes available in seven different languages.  
-
-[View Project](https://github.com/EduardoProfe666/joy-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
-
 ### 🍫 ChocolateMC Phrases
 
-![banner](/public/7.png)
+![banner](/public/3.png)
 
 Inspiring quotes from Chocolate MC (Spanish Only).  
 
@@ -147,7 +111,7 @@ Inspiring quotes from Chocolate MC (Spanish Only).
 
 ### 🤨 KhalyFlowEuropa Phrases
 
-![banner](/public/8.png)
+![banner](/public/3.png)
 
 Inspiring quotes from the Khaly Flow Europa alias El Ambiental (Spanish Only).
 
