@@ -111,7 +111,7 @@ Inspiring quotes from Chocolate MC (Spanish Only).
 
 ### 🤨 KhalyFlowEuropa Phrases
 
-![banner](/public/3.png)
+![banner](/public/4.png)
 
 Inspiring quotes from the Khaly Flow Europa alias El Ambiental (Spanish Only).
 
