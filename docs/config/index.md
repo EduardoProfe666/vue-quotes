@@ -10,9 +10,6 @@ All configuration is managed through `/src/data/data.ts`. The file exports sever
 // Basic Settings
 export const generals: GeneralsSchema = { ... }
 
-// SEO & Meta
-export const metadata: MetadataSchema = { ... }
-
 // Quote Badges
 export const badges: BadgeSchema[] = [ ... ]
 
@@ -31,6 +28,8 @@ export const search: SearchSchema = { ... }
 // Visual Themes
 export const themes: ThemeSchema = { ... }
 ```
+
+It is also possible to config metadata and SEO in corresponding sections of `index.html`.
 
 ## 🗺️ Configuration Sections
 
