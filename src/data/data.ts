@@ -9,9 +9,11 @@ import LanguageSchema from "../types/language-schema.ts";
 
 // ---------------------------- 🎯 GENERALS 🎯 ---------------------------- //
 export const generals: GeneralsSchema = {
-    title: 'Quotes',
-    randomPhrases: false,
-    internationalizationEnabled: true,
+    title: '🤨 Frases de El Ambiental',
+    randomPhrases: true,
+    internationalizationEnabled: false,
+    authorImage: '/author.png',
+    author: 'El Ambiental',
 };
 
 // ---------------------------- 🏷️ BADGES 🏷️ ---------------------------- //
@@ -34,10 +36,9 @@ export const phrases: PhraseSchema[] = [
             {languageId: 'en', message: 'Hello World!'},
             {languageId: 'es', message: 'Hola Mundo!'}
         ],
-        footer: 'Someone',
         badgeId: 'new'
     },
-    {message: 'vue-quotes rocks 🤘', footer: 'An awesome guy'},
+    {message: 'vue-quotes rocks 🤘'},
 ];
 
 // ---------------------------- 🔘 BUTTONS 🔘 ---------------------------- //
@@ -135,4 +136,5 @@ export const themes: ThemeSchema = {
         }
     }
 }
+
 
