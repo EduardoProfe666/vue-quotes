@@ -75,6 +75,9 @@ export const phrases: PhraseSchema[] = [
     {
         message: "Otra cosa q se me olvidaba horita, antes que se me olvide antes de decirte algo; te voy a decir algo, algo antes decírtelo. Vaya te lo voy a repetir, me voy a contradecir y te lo voy a volver a repetir; cuando se me olvide te lo vuelvo a repetir: que tú eres una descará' simpática, eso yo lo sé hace años ☺️",
     },
+    {
+        message: "Yo soy negro, soy feo, pero soy tu asesino; no es la cara ni el cuerpo: es mi palón divino 🪵",
+    },
 ];
 
 // ---------------------------- 🔘 BUTTONS 🔘 ---------------------------- //
