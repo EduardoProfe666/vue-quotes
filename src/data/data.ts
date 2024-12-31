@@ -3,7 +3,7 @@ import { GeneralsSchema } from "../types/generals-schema.ts";
 import { ButtonsSchema } from "../types/buttons-schema.ts";
 import { ThemeSchema } from "../types/theme-schema.ts";
 import BadgeSchema from "../types/badge-schema.ts";
-import { PhShootingStar } from "@phosphor-icons/vue";
+import { PhBiohazard } from "@phosphor-icons/vue";
 import { SearchSchema } from "../types/search-schema.ts";
 import LanguageSchema from "../types/language-schema.ts";
 
@@ -19,9 +19,9 @@ export const generals: GeneralsSchema = {
 // ---------------------------- 🏷️ BADGES 🏷️ ---------------------------- //
 export const badges: BadgeSchema[] = [
     {
-        id: "new",
-        name: "Nuevo",
-        icon: PhShootingStar,
+        id: "rasta",
+        name: "Rastamemba",
+        icon: PhBiohazard,
         background:
             "bg-green-100/90 hover:bg-green-200/95 transition duration-300 ease-in-out",
         backgroundDark:
@@ -35,48 +35,63 @@ export const badges: BadgeSchema[] = [
 export const phrases: PhraseSchema[] = [
     {
         message: "Tú tienes tremendo perro churre en los cascañales, dichava'o de Marianao hace años. 👣",
+        badgeId: "rasta",
     },
     {
         message: "Cállate, no hables más... Tú si eres un singa'o de verdad: mal amigo, traicionero, mal consorte... 🤬",
+        badgeId: "rasta",
     },
     {
         message: "Coño mi hermano! Entra en caja, viejo, coge el hilo, viejo! Con la perra güira esa, con la cabeza esa, Hidrocefálico!!! 🤯",
+        badgeId: "rasta",
     },
     {
         message: "Date 15 respetones, date 10 eskiusmis, 7 o 8 amsorri, y un gudbai broder 👋",
+        badgeId: "rasta",
     },
     {
         message: "Porque tú puedes ser maricón, pero tú lo que no tienes es que esconderlo. Si tu eres maricón ponte la saya!! Ponte la saya descará 🏳️‍🌈",
+        badgeId: "rasta",
     },
     {
         message: "Yo tengo la mestruación, tú sabes cómo? Que me corre de pierna a pierna! 🥵",
+        badgeId: "rasta",
     },
     {
         message: "Sígueme llamando, loquita, que te voy a bloquear ahora mismo. Te voy a bloquear ahora mismo, para que te dejes de confianza 😡",
+        badgeId: "rasta",
     },
     {
         message: "No puedes estar cogiendo los datos móviles para eso, vieja 🤨",
+        badgeId: "rasta",
     },
     {
         message: "Hay wana fokiu, fokiu, wi ni wi nou 🎵... No me acuerdo del inglés ese porque no me lo sé 🫤",
+        badgeId: "rasta",
     },
     {
         message: "Cuando me caigan, caiganme en alicóptero, en tanque de guerra y esa historia: yo ando enfermo de los nervios... Pa que no sepas pa que no esa talla. Asere yo me lo chupo 🔫",
+        badgeId: "rasta",
     },
     {
         message: "La misma lloradera esa, por aquella jeva que se fue... Por eso te tienen que decir pipi triste asere 🥕",
+        badgeId: "rasta",
     },
     {
         message: "Eh pero pero pero... Que salvaje esta?! 😐",
+        badgeId: "rasta",
     },
     {
         message: "Un día vamos a amanecer con la boca llena de hormigas 😵🐜",
+        badgeId: "rasta",
     },
     {
         message: "Otra cosa q se me olvidaba horita, antes que se me olvide antes de decirte algo; te voy a decir algo, algo antes decírtelo. Vaya te lo voy a repetir, me voy a contradecir y te lo voy a volver a repetir; cuando se me olvide te lo vuelvo a repetir: que tú eres una descará' simpática, eso yo lo sé hace años ☺️",
+        badgeId: "rasta",
     },
     {
         message: "Yo soy negro, soy feo, pero soy tu asesino; no es la cara ni el cuerpo: es mi palón divino 🪵",
+        badgeId: "rasta",
     },
 ];
 
