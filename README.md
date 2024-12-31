@@ -88,8 +88,8 @@ Here are some example simple apps of Vue Quotes:
 
 Beautiful love quotes and romantic messages.  
 
-[View Project](https://github.com/EduardoProfe666/love-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/love) |
+[🚀 View Demo](https://love-vue-quotes.onrender.com)
 
 ### 💔 Heartbreak Phrases
 
@@ -97,8 +97,8 @@ Beautiful love quotes and romantic messages.
 
 Heartbreak and moving on quotes.  
 
-[View Project](https://github.com/EduardoProfe666/heartbreak-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/heartbreakx) |
+[🚀 View Demo](https://heartbreak-vue-quotes.onrender.com)
 
 ### 🍫 ChocolateMC Phrases
 
@@ -106,17 +106,17 @@ Heartbreak and moving on quotes.
 
 Inspiring quotes from Chocolate MC (Spanish Only).  
 
-[View Project](https://github.com/EduardoProfe666/chocolate-mc-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/chocolate-mc) |
+[🚀 View Demo](https://frases-chocolatemc.onrender.com)
 
 ### 🤨 KhalyFlowEuropa Phrases
 
-![banner](/public/3.png)
+![banner](/public/4.png)
 
 Inspiring quotes from the Khaly Flow Europa alias El Ambiental (Spanish Only).
 
-[View Project](https://github.com/EduardoProfe666/ambiental-quotes) |
-[View Demo](https://famous-quotes-mix.onrender.com)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/khaly-flow-europa) |
+[🚀 View Demo](https://el-ambiental-frases.onrender.com)
 
 ## 🤝 Contributing
 
