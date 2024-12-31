@@ -10,8 +10,8 @@ Discover various implementations of Vue Quotes, each showcasing different use ca
 
 Beautiful love quotes and romantic messages. 
 
-[🛠️ View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
-[🚀 View Demo](https://github.com/EduardoProfe666/famous-quotes-mix)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/love) | 
+[🚀 View Demo](https://love-vue-quotes.onrender.com)
 
 ### 💔 Heartbreak Phrases
 
@@ -19,8 +19,8 @@ Beautiful love quotes and romantic messages.
 
 Heartbreak and moving on quotes.  
 
-[🛠️ View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
-[🚀 View Demo](https://github.com/EduardoProfe666/famous-quotes-mix)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/heartbreakx) | 
+[🚀 View Demo](https://heartbreak-vue-quotes.onrender.com)
 
 ### 🍫 ChocolateMC Phrases
 
@@ -28,8 +28,8 @@ Heartbreak and moving on quotes.
 
 Inspiring quotes from Chocolate MC (Spanish Only).  
 
-[🛠️ View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
-[🚀 View Demo](https://github.com/EduardoProfe666/famous-quotes-mix)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/chocolate-mc) | 
+[🚀 View Demo](https://frases-chocolatemc.onrender.com)
 
 
 ### 🤨 KhalyFlowEuropa Phrases
@@ -38,8 +38,8 @@ Inspiring quotes from Chocolate MC (Spanish Only).
 
 Inspiring quotes from the Khaly Flow Europa (El Ambiental) (Spanish Only).
 
-[🛠️ View Project](https://github.com/EduardoProfe666/famous-quotes-mix) | 
-[🚀 View Demo](https://github.com/EduardoProfe666/famous-quotes-mix)
+[🛠️ View Project](https://github.com/EduardoProfe666/vue-quotes/tree/khaly-flow-europa) | 
+[🚀 View Demo](https://el-ambiental-frases.onrender.com)
 
 ## 🏗️ Creating Your Own Implementation
 
